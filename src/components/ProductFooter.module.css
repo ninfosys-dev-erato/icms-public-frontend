@@ -1,0 +1,29 @@
+.productFooter {
+  position: sticky;   /* sticks to bottom without covering content */
+  bottom: 0;
+  width: 100%;
+  background: #161616;
+  color: #f4f4f4;
+  border-top: 1px solid #262626;
+  padding: 12px 24px;
+  z-index: 40;
+}
+
+.productFooter nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+    max-width: 1200px;            /* ⬅ keeps same width as error block */
+  margin: 0 auto;               /* ⬅ aligns with “Page not found” column */
+  padding-left: 0;
+}
+
+.productFooter a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.productFooter a:hover { text-decoration: underline; }

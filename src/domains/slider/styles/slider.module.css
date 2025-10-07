@@ -1,0 +1,1185 @@
+/* Slider Layout Container - New Layout with Left Slider and Right Employee Cards */
+.sliderLayoutContainer {
+  display: flex;
+  width: 100%;
+  height:100% !important;
+  max-width: 1200px;
+  min-height: 450px;
+  height: 450px;
+  gap: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e0e0e0;
+  transition: all 0.15s ease;
+  margin: 0 auto 0 auto;
+}
+
+.sliderLayoutContainer:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Left Section - Slider */
+.sliderLeftSection {
+  flex: 3;
+  min-width: 0; /* Allow flex item to shrink below content size */
+  padding-right: 0;
+  min-height: 450px;
+  height: 450px;
+}
+
+/* Right Section - Employee Cards */
+.sliderRightSection {
+  flex: 1;
+  min-width: 380px;
+  max-width: 420px;
+  padding: 1.25rem;
+  background: #ffffff;
+  border-left: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 450px;
+}
+
+/* Employee Cards Container */
+.employeeCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  flex: 1;
+  overflow: visible;
+  min-height: 0;
+}
+
+/* Carbon UI Typography Scale */
+.employeeCardName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161616;
+  line-height: 1.25;
+  margin: 0 0 0.5rem 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+
+.employeeCardTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0066cc;
+  line-height: 1.25;
+  margin: 0 0 0.25rem 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: 0.12px;
+  text-align: left;
+}
+
+.employeeCardDepartment {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #525252;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: 0.08px;
+  text-align: left;
+}
+
+/* Employee Card Placeholder */
+.employeeCardPlaceholder {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.15s ease;
+  margin: 0;
+  min-height: 140px;
+  height: auto;
+}
+
+.employeeCardPlaceholder:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-color: #0066cc;
+}
+
+.employeeCardPlaceholderContent {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  height: 100%;
+}
+
+.employeeCardPlaceholderAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  flex-shrink: 0;
+}
+
+.employeeCardPlaceholderInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.employeeCardPlaceholderName {
+  height: 18px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.employeeCardPlaceholderTitle {
+  height: 14px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 4px;
+  width: 60%;
+}
+
+.employeeCardPlaceholderContact {
+  height: 12px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 4px;
+  width: 70%;
+}
+
+/* Employee Card - Carbon UI Compliant with Improved Layout */
+.employeeCard {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: visible;
+  margin: 0;
+  flex-shrink: 0;
+  min-height: 140px;
+  height: auto;
+}
+
+.employeeCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.employeeCard:focus-within {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.employeeCardContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+.employeeCardAvatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #f4f4f4;
+  border: 2px solid #e0e0e0;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.employeeCard:hover .employeeCardAvatar {
+  border-color: #0066cc;
+}
+
+.employeeCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+
+.employeeCard:hover .employeeCardImage {
+  transform: scale(1.05);
+}
+
+.employeeCardPlaceholderAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0066cc, #0078d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  transition: all 0.15s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.employeeCard:hover .employeeCardPlaceholderAvatar {
+  background: linear-gradient(135deg, #004499, #0066cc);
+  color: #ffffff;
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.employeeCardPlaceholderAvatar.hidden {
+  display: none;
+}
+
+.employeeCardInitials {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.employeeCardInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact Section - Carbon UI Style with Improved Layout */
+.employeeCardContactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.375rem 0 0 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.employeeCardContactSection:hover {
+  background: transparent;
+}
+
+.employeeCardContact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+  font-size: 0.7rem;
+  color: #525252;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0.125rem 0;
+  transition: color 0.15s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.employeeCardContact:hover {
+  color: #161616;
+}
+
+.employeeCardContactSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+  font-size: 0.7rem;
+  color: #8d8d8d;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0.125rem 0;
+  transition: color 0.15s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.employeeCardContactSecondary:hover {
+  color: #525252;
+}
+
+.employeeCardEmail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+  font-size: 0.7rem;
+  color: #525252;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0.125rem 0;
+  transition: color 0.15s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.employeeCardEmail:hover {
+  color: #161616;
+}
+
+.employeeCardContactIcon {
+  width: 11px;
+  height: 11px;
+  color: #0066cc;
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: all 0.15s ease;
+}
+
+.employeeCardContact:hover .employeeCardContactIcon,
+.employeeCardContactSecondary:hover .employeeCardContactIcon,
+.employeeCardEmail:hover .employeeCardContactIcon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.employeeCardContactText {
+  font-size: 0.7rem;
+  color: #525252;
+  line-height: 1.25;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-align: left;
+  word-break: break-word;
+  flex: 1;
+}
+
+/* Employee Card States */
+.employeeCardError {
+  background: #fff2f2;
+  border: 1px solid #ffd7d9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.employeeCardError p {
+  margin: 0;
+  color: #da1e28;
+  font-size: 0.875rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.employeeCardEmpty {
+  background: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.employeeCardEmpty p {
+  margin: 0;
+  color: #525252;
+  font-size: 0.875rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Slider Container - Carbon UI Enhanced */
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e0e0e0;
+  transition: all 0.15s ease;
+}
+
+.sliderContainer:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Slider Content Area */
+.sliderContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Individual Slider Item */
+.sliderItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.sliderItemActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 10;
+}
+
+.sliderItemTransitioning {
+  transition-duration: 0.3s;
+}
+
+/* Slider Item Image */
+.sliderItemImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliderItemImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.sliderItem:hover .sliderItemImg {
+  transform: scale(1.05);
+}
+
+/* Image Overlay */
+.sliderItemOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  pointer-events: none;
+}
+
+/* Slider Item Content */
+.sliderItemContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  color: #ffffff;
+  z-index: 20;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+}
+
+/* Slider Item Title */
+.sliderItemTitle {
+  margin-bottom: 1rem;
+}
+
+.sliderItemTitleText {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.01em;
+}
+
+/* Slider Item Details */
+.sliderItemDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sliderItemPosition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.sliderItemPositionText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Slider Item Stats */
+.sliderItemStats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.sliderItemStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sliderItemStatLabel {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sliderItemStatValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Click Indicator */
+.sliderItemClickIndicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(15, 98, 254, 0.9);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  z-index: 30;
+}
+
+.sliderItemClickIndicator:hover {
+  background: rgba(15, 98, 254, 1);
+  transform: scale(1.1);
+}
+
+.sliderItemClickIcon {
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+/* Loading State */
+.sliderItemLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 40;
+}
+
+.sliderItemLoadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e0e0e0;
+  border-top: 3px solid #0f62fe;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Navigation */
+.sliderNavigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.sliderNavigation > * {
+  pointer-events: auto;
+}
+
+/* Navigation Buttons */
+.sliderNavButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.sliderNavButton:hover:not(.sliderNavButtonDisabled) {
+  background: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sliderNavButton:focus {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
+}
+
+.sliderNavButtonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sliderNavIcon {
+  color: #161616;
+  transition: color 0.2s ease;
+}
+
+.sliderNavButton:hover:not(.sliderNavButtonDisabled) .sliderNavIcon {
+  color: #0f62fe;
+}
+
+/* Navigation Counter */
+.sliderNavCounter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sliderNavCounterCurrent {
+  color: #0f62fe;
+  font-weight: 600;
+}
+
+.sliderNavCounterSeparator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sliderNavCounterTotal {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Indicators */
+.sliderIndicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 30;
+}
+
+.sliderIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sliderIndicator:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sliderIndicator:focus {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
+}
+
+.sliderIndicatorActive {
+  color: #0f62fe;
+}
+
+.sliderIndicatorDot {
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.sliderIndicatorActive .sliderIndicatorDot {
+  width: 16px;
+  height: 16px;
+  background: #0f62fe;
+  box-shadow: 0 0 0 2px rgba(15, 98, 254, 0.3);
+}
+
+.sliderIndicatorLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sliderIndicator:hover .sliderIndicatorLabel,
+.sliderIndicatorActive .sliderIndicatorLabel {
+  opacity: 1;
+}
+
+/* Progress Bar */
+.sliderProgress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 25;
+}
+
+.sliderProgressBar {
+  height: 100%;
+  background: #0f62fe;
+  transition: width 0.3s ease;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(15, 98, 254, 0.4);
+}
+
+/* Skeleton Loading */
+.sliderSkeleton {
+  background: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderSkeletonContent {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Error State */
+.sliderError {
+  background: #f4f4f4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #da1e28;
+}
+
+.sliderErrorContent {
+  text-align: center;
+  padding: 2rem;
+}
+
+.sliderErrorContent p {
+  margin: 0;
+  font-size: 1rem;
+  color: #da1e28;
+}
+
+/* Empty State */
+.sliderEmpty {
+  background: #f4f4f4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #525252;
+}
+
+.sliderEmptyContent {
+  text-align: center;
+  padding: 2rem;
+}
+
+.sliderEmptyContent p {
+  margin: 0;
+  font-size: 1rem;
+  color: #525252;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sliderLayoutContainer {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .sliderRightSection {
+    min-width: auto;
+    max-width: none;
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    padding: 1rem;
+  }
+  
+  .employeeCardsContainer {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    gap: 1rem;
+  }
+  
+  .employeeCard {
+    min-width: 320px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  
+  .employeeCardAvatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .employeeCardImage {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .employeeCardContactSection {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  
+  .employeeCardPlaceholder {
+    min-width: 280px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  
+  .sliderContainer {
+    height: 350px;
+  }
+  
+  .sliderItemTitleText {
+    font-size: 1.5rem;
+  }
+  
+  .sliderItemContent {
+    padding: 1.5rem;
+  }
+  
+  .sliderNavigation {
+    padding: 0 0.75rem;
+  }
+  
+  .sliderNavButton {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderLayoutContainer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+  
+  .sliderRightSection {
+    padding: 0.75rem;
+  }
+  
+  .employeeCardPlaceholder {
+    padding: 1rem;
+    min-width: 250px;
+    margin: 0;
+  }
+  
+  .employeeCardPlaceholderAvatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .employeeCard {
+    padding: 1rem;
+    min-width: 250px;
+    margin: 0;
+  }
+  
+  .employeeCardAvatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .employeeCardImage {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .employeeCardName {
+    font-size: 0.875rem;
+  }
+  
+  .employeeCardTitle {
+    font-size: 0.8rem;
+  }
+  
+  .employeeCardDepartment,
+  .employeeCardContact,
+  .employeeCardEmail {
+    font-size: 0.7rem;
+  }
+  
+  .employeeCardContactSection {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .sliderContainer {
+    height: 450px;
+  }
+  
+  .sliderItemTitleText {
+    font-size: 1.25rem;
+  }
+  
+  .sliderItemContent {
+    padding: 1rem;
+  }
+  
+  .sliderItemDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .sliderItemStats {
+    gap: 1rem;
+  }
+  
+  .sliderNavigation {
+    padding: 0 0.5rem;
+  }
+  
+  .sliderNavButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .sliderNavCounter {
+    display: none;
+  }
+  
+  .sliderIndicators {
+    bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderLayoutContainer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+  
+  .sliderContainer {
+    height: 350px;
+  }
+  
+  .sliderItemTitleText {
+    font-size: 1.125rem;
+  }
+  
+  .sliderItemContent {
+    padding: 0.75rem;
+  }
+  
+  .sliderItemPosition {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .sliderItemPositionText {
+    font-size: 0.875rem;
+  }
+  
+  .sliderItemStatLabel {
+    font-size: 0.6875rem;
+  }
+  
+  .sliderItemStatValue {
+    font-size: 0.875rem;
+  }
+  
+  .sliderNavButton {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .sliderNavIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .sliderIndicators {
+    gap: 0.25rem;
+  }
+  
+  .sliderIndicator {
+    padding: 0.375rem;
+  }
+  
+  .sliderIndicatorDot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .sliderIndicatorActive .sliderIndicatorDot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Slider Item Caption */
+.sliderItemCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 1rem;
+  z-index: 30;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.sliderItem:hover .sliderItemCaption {
+  transform: translateY(0);
+}
+
+.sliderItemCaptionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sliderItemCaptionText {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sliderItemCaptionDescription {
+  font-size: 0.75rem;
+  color: #525252;
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Responsive adjustments for caption */
+@media (max-width: 768px) {
+  .sliderItemCaption {
+    padding: 0.75rem;
+  }
+  
+  .sliderItemCaptionText {
+    font-size: 0.8rem;
+  }
+  
+  .sliderItemCaptionDescription {
+    font-size: 0.7rem;
+  }
+}
+
+

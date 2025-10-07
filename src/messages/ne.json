@@ -1,0 +1,213 @@
+{
+  "common": {
+    "loading": "लोड हुँदै...",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "search": "खोज्नुहोस्",
+    "readMore": "थप पढ्नुहोस्",
+    "downloadPdf": "PDF डाउनलोड गर्नुहोस्",
+    "viewDetails": "विस्तृत विवरण हेर्नुहोस्",
+    "goBack": "फर्केर जानुहोस्",
+    "close": "बन्द गर्नुहोस्",
+    "submit": "पेश गर्नुहोस्",
+    "cancel": "रद्द गर्नुहोस्",
+    "save": "सुरक्षित गर्नुहोस्",
+    "edit": "सम्पादन गर्नुहोस्",
+    "delete": "मेटाउनुहोस्",
+    "confirm": "पुष्टि गर्नुहोस्",
+    "yes": "हो",
+    "no": "होइन"
+  },
+  "navigation": {
+    "home": "गृह पृष्ठ",
+    "about": "हाम्रो बारेमा",
+    "news": "समाचार",
+    "notices": "सूचना",
+    "documents": "कार्यालय विवरणहरू",
+    "services": "सेवाहरू",
+    "contact": "सम्पर्क",
+    "faq": "बारम्बार सोधिने प्रश्नहरू"
+  ,
+  "openMenu": "मेनु खोल्नुहोस्",
+  "closeMenu": "मेनु बन्द गर्नुहोस्",
+  "sideNavigation": "साइड नेभिगेसन",
+  "mainNavigation": "मुख्य नेभिगेसन"
+  },
+  "header": {
+    "govNepal": "नेपाल सरकार",
+    "ministry": "मन्त्रालय",
+    "department": "विभाग",
+    "localGov": "स्थानीय तह",
+    "languageSwitch": "भाषा परिवर्तन",
+    "nepali": "नेपाली",
+    "english": "अंग्रेजी"
+  },
+  "footer": {
+    "quickLinks": "द्रुत लिंकहरू",
+    "importantLinks": "महत्वपूर्ण लिंकहरू",
+    "contactInfo": "सम्पर्क जानकारी",
+    "address": "ठेगाना",
+    "phone": "फोन",
+    "email": "इमेल",
+    "website": "वेबसाइट",
+    "socialMedia": "सामाजिक सञ्जाल",
+    "copyright": "सर्वाधिकार सुरक्षित",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfUse": "प्रयोगका सर्तहरू"
+  },
+  "home": {
+    "welcome": "स्वागतम्",
+    "latestNews": "ताजा समाचार",
+    "latestNotices": "ताजा सूचनाहरू",
+    "importantDocuments": "महत्वपूर्ण कागजातहरू",
+    "quickServices": "द्रुत सेवाहरू",
+    "popularDownloads": "लोकप्रिय डाउनलोडहरू"
+  },
+  "search": {
+    "placeholder": "खोज्नुहोस्...",
+    "results": "खोज परिणामहरू",
+    "noResults": "कुनै परिणाम फेला परेन",
+    "searchFor": "यसको लागि खोज्नुहोस्:",
+    "filters": "फिल्टरहरू",
+    "sortBy": "क्रमबद्ध गर्नुहोस्",
+    "relevance": "प्रासंगिकता",
+    "date": "मिति",
+    "title": "शीर्षक"
+  },
+  "content": {
+    "title": "सामग्री",
+    "description": "हाम्रा सामग्री र स्रोतहरू ब्राउज गर्नुहोस्",
+    "loading": "सामग्री लोड गर्दै...",
+    "error": "सामग्री लोड गर्न सकिएन",
+    "noContent": "कुनै सामग्री फेला परेन",
+    "noContentDescription": "हाल कुनै सामग्री उपलब्ध छैन।",
+    "publishedOn": "प्रकाशित मिति",
+    "lastUpdated": "अन्तिम अपडेट",
+    "category": "श्रेणी",
+    "tags": "ट्यागहरू",
+    "relatedContent": "सम्बन्धित सामग्री",
+    "attachments": "संलग्नकहरू",
+    "downloadCount": "डाउनलोड संख्या",
+    "readMore": "थप पढ्नुहोस्",
+    "viewDetails": "विस्तृत विवरण हेर्नुहोस्"
+  },
+  "forms": {
+    "name": "नाम",
+    "email": "इमेल",
+    "phone": "फोन नम्बर",
+    "message": "सन्देश",
+    "subject": "विषय",
+    "required": "आवश्यक",
+    "optional": "वैकल्पिक",
+    "submit": "पेश गर्नुहोस्",
+    "sending": "पठाउँदै...",
+    "sent": "पठाइयो",
+    "error": "त्रुटि भयो"
+  },
+  "dates": {
+    "today": "आज",
+    "yesterday": "हिजो",
+    "tomorrow": "भोलि",
+    "thisWeek": "यो हप्ता",
+    "thisMonth": "यो महिना",
+    "thisYear": "यो वर्ष"
+  },
+  "calendar": {
+    "bs": "बि.स.",
+    "ad": "ई.स.",
+    "nepaliCalendar": "नेपाली पात्रो",
+    "englishCalendar": "अंग्रेजी पात्रो"
+  },
+  "office": {
+    "introduction": "परिचय",
+    "objective": "उद्देश्य",
+    "workDetails": "कार्य विवरण",
+    "organizationalStructure": "संगठनात्मक संरचना",
+    "digitalCharter": "डिजिटल चार्टर",
+    "employeeSanctions": "कर्मचारी प्रतिबन्ध",
+    "departments": "विभागहरू",
+    "employees": "कर्मचारीहरू"
+  },
+  "documents": {
+    "types": {
+      "PDF": "PDF",
+      "DOC": "Word कागजात",
+      "DOCX": "Word कागजात",
+      "XLS": "Excel फाइल",
+      "XLSX": "Excel फाइल",
+      "PPT": "प्रस्तुति",
+      "PPTX": "प्रस्तुति"
+    },
+    "categories": {
+      "OFFICIAL": "आधिकारिक",
+      "REPORT": "रिपोर्ट",
+      "FORM": "फारम",
+      "POLICY": "नीति",
+      "PROCEDURE": "प्रक्रिया",
+      "GUIDELINE": "दिशानिर्देश",
+      "NOTICE": "सूचना",
+      "CIRCULAR": "परिपत्र"
+    }
+  },
+  "hr": {
+    "title": "कर्मचारीहरू",
+    "description": "विभिन्न विभागहरूमा काम गर्ने हाम्रा समर्पित पेशेवरहरूसँग भेट्नुहोस्",
+    "loading": "टोलीको जानकारी लोड गर्दै...",
+    "error": "टोलीको जानकारी लोड गर्न सकिएन",
+    "noEmployees": "कुनै कर्मचारी फेला परेनन्",
+    "noEmployeesDescription": "तपाईंको खोज मापदण्डसँग मेल खाने कुनै कर्मचारीहरू हालमा छैनन्।",
+    "totalDepartments": "कुल विभागहरू",
+    "totalEmployees": "कुल कर्मचारीहरू",
+    "employeesWithPhotos": "फोटो भएका कर्मचारीहरू",
+    "departmentsWithEmployees": "सक्रिय विभागहरू",
+    "filters": {
+      "filtersTitle": "फिल्टरहरू",
+      "search": "कर्मचारीहरू खोज्नुहोस्...",
+      "searchPlaceholder": "नाम, पद, वा सम्पर्क अनुसार खोज्नुहोस्...",
+      "department": "विभाग",
+      "allDepartments": "सबै विभागहरू",
+      "allPositions": "सबै पदहरू",
+      "enterCustom": "अन्य दर्ज गर्नुहोस्",
+      "reset": "फिल्टर रिसेट गर्नुहोस्",
+      "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैनन्} =1 {1 जना कर्मचारी} other {# जना कर्मचारीहरू}}"
+    },
+    "departments": {
+      "order": "क्रम",
+      "active": "सक्रिय",
+      "inactive": "निष्क्रिय",
+      "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैनन्} =1 {1 जना कर्मचारी} other {# जना कर्मचारीहरू}}"
+    },
+    "employees": {
+      "name": "नाम",
+      "phone": "फोन",
+      "view": "हेर्नुहोस्",
+      "photo": "फोटो",
+      "position": "पद",
+      "department": "विभाग",
+      "order": "क्रम",
+      "status": "स्थिति",
+      "contactInformation": "सम्पर्क जानकारी",
+      "roomNumber": "कोठा नम्बर",
+      "mobile": "मोबाइल",
+      "telephone": "टेलिफोन",
+      "email": "इमेल",
+      "employeeId": "कर्मचारी आईडी",
+      "hasPhoto": "फोटो छ",
+      "yes": "छ",
+      "no": "छैन"
+    }
+  },
+  "notices": {
+    "title": "सूचनाहरू",
+    "description": "हाम्रो कार्यालयबाट महत्वपूर्ण सूचना र घोषणाहरू",
+    "loading": "सूचनाहरू लोड गर्दै...",
+    "error": "सूचनाहरू लोड गर्न सकिएन",
+    "noNotices": "कुनै सूचना फेला परेन",
+    "noNoticesDescription": "हाल कुनै सूचनाहरू उपलब्ध छैनन्।",
+    "filtersTitle": "फिल्टरहरू",
+    "publishedOn": "प्रकाशित मिति",
+    "category": "श्रेणी",
+    "allCategories": "सबै श्रेणीहरू",
+    "downloadPdf": "PDF डाउनलोड गर्नुहोस्"
+  }
+}

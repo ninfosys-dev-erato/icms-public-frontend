@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+      args:
+        # Bake public vars into the client bundle at build time
+        NODE_ENV: production
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL}
+        NEXT_PUBLIC_DEBUG: ${NEXT_PUBLIC_DEBUG:-false}
+      cache_from:
+        - node:20-alpine
+
+    image: public-frontend:${APP_VERSION:-latest}
+    restart: unless-stopped
+
+    # Load runtime envs from .env (same dir as this compose file)
+    env_file:
+      - .env
+
+    # Explicit runtime envs (server-side only or generic)
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+      NODE_OPTIONS: --max-old-space-size=2048
+      FORCE_HTTPS: ${FORCE_HTTPS:-false}
+      TRUST_PROXY: ${TRUST_PROXY:-false}
+      APP_ENV: ${APP_ENV:-production}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      API_TIMEOUT: ${API_TIMEOUT:-30000}
+      # IMPORTANT: no default fallback here; must come from .env
+      NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL}
+
+    ports:
+      - "${APP_PORT:-3000}:3000"

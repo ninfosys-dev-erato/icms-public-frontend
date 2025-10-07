@@ -1,0 +1,12 @@
+# keep env files out of the image
+.env
+.env.*
+# usual noise
+node_modules
+.next
+.git
+.gitignore
+Dockerfile*
+docker-compose*.yml
+README*
+

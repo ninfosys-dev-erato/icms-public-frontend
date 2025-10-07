@@ -1,0 +1,1165 @@
+.categoryListingContainer {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.categoryHeader {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 1rem;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.2;
+}
+
+.categoryDescription {
+  font-size: 1.125rem;
+  color: #525252;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.categoryMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #6f6f6f;
+}
+
+.contentCount {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f4f4f4;
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+
+.contentTableContainer {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.tableHeader {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+}
+
+.tableTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.contentTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.tableHeaderCell {
+  background: #f8f9fa;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #161616;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+}
+
+.tableRow {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background: #f8f9fa;
+}
+
+.tableCell {
+  padding: 1rem 1.5rem;
+  vertical-align: top;
+  font-size: 0.875rem;
+  color: #525252;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contentTitleCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contentTitle {
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.contentSlug {
+  font-size: 0.75rem;
+  color: #6f6f6f;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  background: #f4f4f4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.contentExcerpt {
+  line-height: 1.5;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.statuspublished {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statusdraft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusarchived {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.featuredBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #cce5ff;
+  color: #004085;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.attachmentCount {
+  font-weight: 500;
+  color: #161616;
+}
+
+.dateText {
+  color: #6f6f6f;
+  font-size: 0.8rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #0f62fe;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.viewButton:hover {
+  background: #0043ce;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.emptyState {
+  /* text-align: center; */
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.emptyStateIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  color: #c1c1c1;
+}
+
+.emptyStateIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.emptyStateTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 0.5rem;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.emptyStateDescription {
+  font-size: 1rem;
+  color: #6f6f6f;
+  line-height: 1.5;
+}
+
+.emptyStateInline {
+  text-align: left;
+  padding: 3rem 0;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.emptyStateInline .emptyStateIcon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 1rem 0;
+  color: #c1c1c1;
+}
+
+.emptyStateInline .emptyStateIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.emptyStateInline .emptyStateTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 0.5rem;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.emptyStateInline .emptyStateDescription {
+  font-size: 0.875rem;
+  color: #6f6f6f;
+  line-height: 1.5;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.paginationInfo {
+  font-size: 0.875rem;
+  color: #6f6f6f;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.paginationButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  color: #525252;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.paginationButton:hover {
+  background: #f4f4f4;
+  border-color: #c1c1c1;
+  color: #161616;
+}
+
+.paginationPage {
+  font-size: 0.875rem;
+  color: #525252;
+  font-weight: 500;
+}
+
+/* New layout styles for sidebar + listing */
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+}
+
+.sidebar {
+  /* padding-top: 1rem; */
+  /* vertical separator */
+  border-right: 1px solid #e6e6e6;
+  padding-right: 1.25rem;
+}
+
+/* Layout adjustments: remove inner scroll so pagination stays visible below the list */
+.categoryListingContainer {
+  /* allow page to scroll naturally; don't force inner scrolling */
+  min-height: auto;
+}
+
+.sidebar {
+  position: relative;
+  align-self: start;
+  height: 92.9vh !important;
+
+  /* keep filters visible */
+}
+
+.sidebar > .filtersCard {
+  position: sticky;
+  top: 20px;
+}
+
+/* Keep main content column but constrain height so the list can scroll */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  /* keep a constrained height so the list area can scroll without enlarging the page too much */
+  max-height: calc(100vh - 160px);
+  position: relative;
+  padding-right: 10rem;
+}
+
+/* The scrollable area contains search + list - allow it to scroll */
+.scrollArea {
+  overflow: auto;
+  flex: 1 1 auto;
+  padding-right: 8px; /* prevent hiding vertical scrollbar */
+}
+
+/* Make sidebar height automatic to avoid forcing page-level offsets */
+.sidebar {
+  height: auto;
+}
+
+/* Footer (pagination) styling - keep it in normal flow beneath content */
+.footerBar {
+  background: transparent;
+  z-index: 20;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* Make the pagination visible by sticking it to the bottom inside the layout
+     so users don't need to scroll the outer page to see it. Using sticky keeps
+     it in the normal flow until it reaches the bottom of the viewport. */
+  position: sticky;
+  bottom: 0;
+  /* Add a light backdrop so it remains legible over the list */
+  backdrop-filter: blur(4px);
+}
+
+.itemDivider {
+  height: 1px;
+  background: #e6e6e6;
+  margin: 1rem 0 0 0;
+  width: 100%;
+}
+
+.filtersCard {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+.filtersTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.filterSection {
+  margin-bottom: 1rem;
+}
+
+.filterLabel {
+  font-size: 0.875rem;
+  color: #6f6f6f;
+  display: block;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.checkboxList label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #525252;
+}
+
+.mainContent {
+  min-height: 60vh;
+  padding-left: 1rem;
+  /* max-width: 80%; */
+}
+
+.searchBar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto; /* allow horizontal scrolling when the search controls overflow */
+  -webkit-overflow-scrolling: touch;
+}
+
+.searchInput {
+  width: 100%;
+}
+/* Hide Carbon default search close icon inside this view */
+.searchInput :global(.cds--search-close) {
+  display: none !important;
+}
+/* Wrapper to position inline controls */
+.searchWrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0; /* allow the wrapper to shrink inside flex containers */
+}
+
+.searchControls {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+/* Make sure controls can show tooltips and are not clipped */
+.controlsRow {
+  overflow: visible; /* allow tooltip elements to overflow */
+  z-index: 40; /* sit above list items */
+}
+
+/* Icon-only buttons: remove heavy default outline and use subtle focus ring */
+.controlsRow :global(button),
+.searchControls :global(button),
+.iconButton {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.controlsRow :global(button:focus),
+.searchControls :global(button:focus),
+.iconButton:focus {
+  outline: none !important;
+  border: none;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #6f6f6f;
+}
+
+.separator {
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+/* make sure the input has extra right padding so controls don't overlap text */
+.searchWrapper :global(.bx--search-input) {
+  padding-right: 80px;
+  min-width: 0; /* prevent input from forcing its container wider than available space */
+}
+
+/* Ensure search controls don't force overflow by allowing them to wrap or hide */
+.searchControls {
+  max-width: 40%;
+  overflow: hidden;
+}
+
+.listContainer {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.5rem 0;
+}
+
+.listItemLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border-radius: 0.5rem;
+}
+
+
+.listItem {
+  padding: 1rem 0.5rem;
+}
+
+.listItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.listItemTitle {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161616;
+  flex: 1 1 auto; /* allow title to take available space */
+  min-width: 0; /* enable proper truncation inside flex */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* keep single-line with ellipsis */
+}
+
+.dateText {
+  flex: 0 0 auto;
+  /* margin-left: 0.5rem; */
+  font-size: 0.875rem;
+  color: #6f6f6f;
+}
+
+.listItemExcerpt {
+  margin: 0.5rem 0 0.75rem 0;
+  color: #6f6f6f;
+}
+
+.listItemMeta {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.tagList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #f4f4f4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.attachmentList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.attachmentButton {
+  border: 1px solid #e6e6e6 !important;
+  font-size: 0.8rem !important;
+  padding: 0.78rem !important;
+  min-height: auto !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  gap: 0.5rem !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+.attachmentButton svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
+  margin: 0 !important;
+  margin-right: 0.25rem !important;
+}
+
+
+
+
+.attachmentChip {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  color: #0f62fe;
+  text-decoration: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.1s ease;
+  border: none;
+  cursor: pointer;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.viewButton:hover {
+  text-decoration: underline;
+}
+
+.pageIndicator {
+  font-size: 0.875rem;
+  color: #525252;
+}
+
+/* Controls row under search */
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.controlsLeft, .controlsRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Make sure controls align nicely on small screens */
+@media (max-width: 640px) {
+  .controlsRow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .categoryListingContainer {
+    padding: 0.5rem;
+  }
+
+  .categoryHeader {
+    padding: 1.5rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.75rem;
+  }
+
+  .tableHeader {
+    padding: 1rem 1.5rem;
+  }
+
+  .tableCell {
+    padding: 0.75rem 1rem;
+  }
+
+  .contentExcerpt {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .tableWrapper {
+    overflow-x: scroll;
+  }
+
+  .contentTable {
+    min-width: 800px;
+  }
+
+  .paginationContainer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .paginationControls {
+    justify-content: center;
+  }
+
+  /* Hide separator on small screens */
+  .sidebar {
+    border-right: none;
+    padding-right: 0;
+  }
+  .mainContent {
+    padding-left: 0;
+    padding-bottom: 0; /* allow normal flow on small screens */
+  }
+  .sidebar {
+    height: auto;
+  }
+}
+
+/* When noSidebar class is applied, collapse the sidebar */
+.noSidebar .layout {
+  grid-template-columns: 0px 1fr;
+}
+
+.noSidebar .sidebar {
+  display: none;
+}
+
+/* Small tweak so main content expands */
+.noSidebar .mainContent {
+  padding-left: 0.5rem;
+}
+
+/* Hide Carbon tooltip/popover caret inside this component to avoid the small black bar */
+.controlsLeft :global(.cds--popover-caret),
+.controlsLeft :global(.cds--popover__caret),
+.controlsLeft :global(.cds--tooltip__caret) {
+  display: none !important;
+}
+.controlsLeft :global(.cds--popover-caret),
+.controlsLeft :global(.cds--popover__caret),
+.controlsLeft :global(.cds--tooltip__caret),
+.controlsLeft :global(.cds--popover-content),
+.controlsLeft :global(.cds--tooltip-content) {
+  display: none !important;
+  visibility: hidden !important;
+}
+.controlsRight :global(.cds--popover-caret),
+.controlsRight :global(.cds--popover__caret),
+.controlsRight :global(.cds--tooltip__caret) {
+  display: none !important;
+}
+.controlsRight :global(.cds--popover-caret),
+.controlsRight :global(.cds--popover__caret),
+.controlsRight :global(.cds--tooltip__caret),
+.controlsRight :global(.cds--popover-content),
+.controlsRight :global(.cds--tooltip-content) {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Remove other tiny decorative pseudo-elements inside the list area */
+.listContainer::before,
+.listContainer::after,
+.listContainer *::before,
+.listContainer *::after,
+.filtersCard::before,
+.filtersCard::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Mobile Responsive Styles */
+
+/* Mobile backdrop for overlay sidebar */
+.mobileBackdrop {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+/* Mobile layout adjustments */
+.mobileLayout {
+  display: block !important;
+}
+
+/* Mobile sidebar styles */
+.mobileSidebar {
+  position: fixed !important;
+  top: 230px;
+  left: -100vw;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background: #ffffff;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  padding: 1.5rem;
+  border: none;
+  /* Ensure it's completely separated from normal layout */
+  transform: translateZ(0);
+  will-change: left;
+}
+
+.mobileSidebarOpen {
+  left: 0 !important;
+}
+
+/* Mobile close button */
+.mobileCloseButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.mobileCloseButton button {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 50% !important;
+  background: #f4f4f4 !important;
+}
+
+.mobileCloseButton button:hover {
+  background: #e0e0e0 !important;
+}
+
+/* Mobile sidebar content styling */
+.mobileSidebar .filtersCard {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 100%;
+}
+
+.mobileSidebar .filtersTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mobileSidebar .filterSection {
+  margin-bottom: 1.5rem;
+}
+
+.mobileSidebar .input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+/* Mobile footer bar */
+.mobileFooterBar {
+  padding: 0.75rem 0.5rem !important;
+}
+
+.paginationWrapper {
+  width: 100%;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .tableWrapper {
+    overflow-x: scroll;
+  }
+
+  .contentTable {
+    min-width: 800px;
+  }
+
+  /* Hide separator on small screens */
+  .sidebar {
+    border-right: none;
+    padding-right: 0;
+  }
+  
+  .mainContent {
+    padding-left: 0;
+    padding-right: 0.5rem !important;
+    max-height: none;
+  }
+  
+  .sidebar {
+    height: auto;
+  }
+
+  /* Mobile search adjustments */
+  .searchBar {
+    margin-bottom: 1rem;
+  }
+
+  .searchWrapper :global(.bx--search-input) {
+    padding-right: 60px;
+  }
+
+  /* Mobile controls row */
+  .controlsRow {
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile list item adjustments */
+  .listItem {
+    padding: 1rem 0.25rem;
+  }
+
+  .listItemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .listItemTitle {
+    font-size: 1rem;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  .listItemMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .attachmentList {
+    width: 100%;
+  }
+
+  .attachmentButton {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .categoryListingContainer {
+    padding: 0.25rem;
+  }
+
+  .mobileSidebar {
+    width: 100vw;
+    left: -100vw;
+  }
+
+  .listItemTitle {
+    font-size: 0.95rem;
+  }
+
+  .listItemExcerpt {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .searchWrapper {
+    min-width: 0;
+  }
+
+  .searchWrapper :global(.bx--search-input) {
+    font-size: 0.875rem;
+    padding-right: 50px;
+  }
+
+  .controlsRow {
+    gap: 0.5rem;
+  }
+
+  .attachmentButton {
+    font-size: 0.75rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .footerBar {
+    padding: 0.5rem 0.25rem !important;
+  }
+}
+
+/* Large screens - ensure proper spacing */
+@media (min-width: 1200px) {
+  /* .categoryListingContainer {
+    max-width: 1200px;
+  } */
+
+  .mainContent {
+    padding-right: 2rem;
+  }
+}
+
+/* Tablet landscape adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 280px 1fr !important;
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    width: 280px;
+  }
+
+  .mainContent {
+    padding-right: 1rem;
+  }
+}
+
+/* Hide desktop sidebar on mobile */
+@media (max-width: 768px) {
+  .sidebar:not(.mobileSidebar) {
+    display: none !important;
+  }
+  
+  /* Ensure main content is visible on mobile */
+  .mainContent {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.5rem !important;
+  }
+  
+  /* Make sure list container is visible */
+  .listContainer {
+    display: block !important;
+  }
+}
+
+/* Ensure proper stacking context */
+.categoryListingContainer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 768px) {
+  /* Make list items more touch-friendly */
+  .listItemLink {
+    min-height: 44px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  /* Improve tag list on mobile */
+  .tagList {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+  }
+
+  /* Better attachment handling on mobile */
+  .attachmentList {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .attachmentButton {
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  /* Responsive empty state */
+  .emptyStateInline {
+    padding: 2rem 1rem;
+  }
+
+  .emptyStateInline .emptyStateTitle {
+    font-size: 1rem;
+  }
+
+  .emptyStateInline .emptyStateDescription {
+    font-size: 0.8rem;
+  }
+}

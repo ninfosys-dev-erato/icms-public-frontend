@@ -1,0 +1,141 @@
+{
+  "title": "सामग्री",
+  "description": "हाम्रो सामग्री र संसाधनहरू ब्राउज गर्नुहोस्",
+  "notFound": {
+    "title": "सामग्री फेला परेन",
+    "description": "तपाईंले खोजेको सामग्री फेला पार्न सकिएन।",
+    "actions": {
+      "backToHome": "मुख्य पृष्ठमा फर्कनुहोस्"
+    }
+  },
+  "featured": "विशेष",
+  "meta": {
+    "author": "प्रकाशित",
+    "updated": "अन्तिम अपडेट"
+  },
+  "actions": {
+    "print": "प्रिन्ट",
+    "share": "साझेदारी"
+  },
+  "attachments": {
+    "title": "डाउनलोड र संलग्नकहरू",
+    "download": "डाउनलोड",
+    "preview": "पूर्वावलोकन"
+  },
+  "category": {
+    "totalItems": "{count, plural, =0 {कुनै वस्तु छैन} =1 {१ वस्तु} other {# वस्तुहरू}}",
+    "level": "स्तर {level}",
+    "subcategories": "उपश्रेणीहरू",
+    "content": "सामग्री",
+    "contentList": "सामग्री सूची",
+    "contentCount": "{count} वस्तुहरू",
+    "noContent": "कुनै सामग्री फेला परेन",
+    "noContentDescription": "यस श्रेणीमा अहिले कुनै सामग्री छैन।",
+    "empty": {
+      "title": "कुनै सामग्री उपलब्ध छैन",
+      "description": "यो श्रेणीमा हाल कुनै सामग्री उपलब्ध छैन।"
+    }
+  },
+  "pagination": {
+    "showing": "{total} मध्ये {from}-{to} परिणामहरू देखाइँदै",
+    "previous": "अघिल्लो",
+    "next": "अर्को",
+    "page": "पृष्ठ {page} {total} मध्ये"
+  },
+  "breadcrumb": "ब्रेडक्रम्ब",
+  "breadcrumbNavigation": "ब्रेडक्रम्ब नेभिगेसन",
+  "table": {
+    "title": "शीर्षक",
+    "excerpt": "सारांश",
+    "status": "स्थिति",
+    "featured": "विशेष",
+    "attachments": "संलग्नकहरू",
+    "createdAt": "सिर्जना गरिएको",
+    "actions": "कार्यहरू"
+  },
+  "actions": {
+    "view": "हेर्नुहोस्"
+  },
+  "notice": {
+    "type": {
+      "notice": "नोटिस",
+      "circular": "परिपत्र",
+      "tender": "टेन्डर",
+      "vacancy": "खाली पद",
+      "result": "परिणाम"
+    },
+    "priority": {
+      "normal": "सामान्य",
+      "high": "उच्च",
+      "urgent": "तत्काल"
+    },
+    "referenceNo": "सन्दर्भ नं.",
+    "expiryDate": "म्याद सकिने मिति",
+    "office": "कार्यालय",
+    "publishedDate": "प्रकाशित मिति",
+    "viewCount": "हेराइहरू",
+    "downloadCount": "डाउनलोडहरू",
+    "attachments": "संलग्नकहरू",
+          "download": "डाउनलोड",
+      "view": "हेर्नुहोस्",
+      "readMore": "अझै पढ्नुहोस्",
+      "moreTags": "अझै ट्यागहरू",
+      "filters": {
+        "title": "फिल्टरहरू",
+        "reset": "रीसेट",
+        "searchPlaceholder": "नोटिसहरू खोज्नुहोस्...",
+        "basicFilters": "आधारभूत फिल्टरहरू",
+        "noticeType": "नोटिस प्रकार",
+        "selectNoticeType": "नोटिस प्रकार छान्नुहोस्",
+        "priority": {
+          "label": "प्राथमिकता",
+          "all": "सबै प्राथमिकताहरू"
+        },
+        "selectPriority": "प्राथमिकता छान्नुहोस्",
+        "office": "कार्यालय",
+        "selectOffice": "कार्यालय छान्नुहोस्",
+        "dateFilters": "मिति फिल्टरहरू",
+        "calendar": {
+          "bs": "विक्रम सम्बत",
+          "ad": "ग्रेगोरियन"
+        },
+        "year": "वर्ष",
+        "selectYear": "वर्ष छान्नुहोस्",
+        "month": "महिना",
+        "selectMonth": "महिना छान्नुहोस्",
+        "dateFrom": "मिति बाट",
+        "dateTo": "मिति सम्म",
+        "advancedFilters": "उन्नत फिल्टरहरू",
+        "hasAttachment": "संलग्नकहरू छन्",
+        "activeFilters": "सक्रिय फिल्टरहरू",
+        "noticeTypes": {
+          "all": "सबै प्रकारहरू",
+          "notice": "नोटिस",
+          "circular": "परिपत्र",
+          "tender": "टेन्डर",
+          "vacancy": "खाली पद",
+          "result": "परिणाम"
+        },
+        "offices": {
+          "all": "सबै कार्यालयहरू",
+          "federal": "संघीय",
+          "provincial": "प्रान्तीय",
+          "local": "स्थानीय"
+        }
+      }
+  },
+  "sidebar": {
+    "category": "श्रेणी",
+    "categoryPath": "श्रेणी पथ",
+    "relatedContent": "सम्बन्धित सामग्री",
+    "noRelatedContent": "कुनै सम्बन्धित सामग्री उपलब्ध छैन।",
+    "viewAllInCategory": "यो श्रेणीमा सबै हेर्नुहोस्",
+    "quickActions": "द्रुत कार्यहरू",
+    "featured": "विशेष",
+    "actions": {
+      "print": "पृष्ठ प्रिन्ट गर्नुहोस्",
+      "share": "साझेदारी गर्नुहोस्",
+      "back": "फिर्ता जानुहोस्"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/* ===== Page frame ===== */
+.full-page-error-stories__viewport {
+  min-height: calc(100vh - 48px);
+  background: #fff;
+  color: #161616;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+.full-page-error-stories__offset {
+  max-width: 1312px;            /* matches Carbon page width */
+  margin: 0 auto;
+  padding: 24px 24px 0;
+}
+.full-page-error-stories__breadcrumb-container { margin: 8px 0 20px; }
+.full-page-error-stories__breadcrumb :global(a) { text-decoration: none; }
+
+/* ===== Two-column layout (story-like) ===== */
+.contentRow {
+  display: grid;
+  grid-template-columns: 560px 1fr; /* text left ~560, art right flexes */
+  gap: 64px;
+  align-items: start;
+  padding: 8px 0 40px;
+}
+.textCol { max-width: 620px; }
+
+/* ===== Typography (Carbon Products 404 look) ===== */
+.kicker {
+  font-size: 4.5rem;        /* ≈ 72px */
+  line-height: 1.05;
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #da1e28;           /* red-60 */
+}
+.kickerArrow { margin-right: 10px; }
+.title {
+  font-size: 4rem;          /* ≈ 64px */
+  font-weight: 300;
+  margin: 0 0 18px;
+}
+.description {
+  font-size: 1.0625rem;     /* 17px */
+  color: #525252;           /* gray-60 */
+  max-width: 560px;
+  line-height: 1.55;
+  margin: 0 0 18px;
+}
+.links { margin-top: 20px; }
+
+/* ===== Illustration sizing & alignment ===== */
+.artCol {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.artFrame {
+  /* keep the art contained and aligned like the story */
+  max-width: 800px;
+  /* give it a friendly aspect slot so it never gets too tall or squished */
+  aspect-ratio: 16 / 8;
+  width: 100%;
+  background: #ffffff;
+  /* border-radius: 0.5rem; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+.illustration {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #8d8d8d;           /* stroke color */
+}
+
+/* ===== Footer band (g100) ===== */
+.productFooter {
+  margin-top: 32px;
+  background: #161616;      /* g100 */
+  color: #c6c6c6;
+  padding: 12px 24px;
+}
+.productFooter nav { display: flex; gap: 28px; flex-wrap: wrap; }
+.productFooter a {
+  color: #c6c6c6;
+  text-decoration: none;
+  /* border-radius: 0.375rem; */
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.productFooter a:hover { text-decoration: underline; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .contentRow { grid-template-columns: 1fr; gap: 32px; }
+  .kicker { font-size: 3.5rem; }
+  .title  { font-size: 3rem; }
+  .artFrame { max-width: 100%; aspect-ratio: 16 / 10; }
+}

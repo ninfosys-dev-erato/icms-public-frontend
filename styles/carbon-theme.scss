@@ -1,0 +1,272 @@
+// Nepal Government Portal - Carbon Theme
+@use '@carbon/react/scss/config' with (
+  $prefix: 'cds'
+);
+
+@use '@carbon/react/scss/themes/g10';
+
+// Custom theme tokens for Nepal Government Portal
+:root {
+  // Primary colors - based on Nepal flag colors
+  --nepal-red: #dc143c;
+  --nepal-blue: #003893;
+  --nepal-white: #ffffff;
+  
+  // Custom brand colors
+  --brand-primary: #003893;
+  --brand-secondary: #dc143c;
+  --brand-tertiary: #f8f9fa;
+  
+  // Nepal Government specific colors
+  --gov-primary: var(--nepal-blue);
+  --gov-secondary: var(--nepal-red);
+  --gov-accent: #28a745;
+  --gov-warning: #ffc107;
+  --gov-danger: #dc3545;
+  --gov-info: #17a2b8;
+  
+  // Override Carbon tokens
+  --cds-interactive-01: var(--nepal-blue);
+  --cds-interactive-02: var(--nepal-red);
+  --cds-interactive-03: var(--nepal-blue);
+  --cds-interactive-04: var(--nepal-blue);
+  
+  --cds-link-primary: var(--nepal-blue);
+  --cds-link-primary-hover: #002066;
+  
+  --cds-focus: var(--nepal-blue);
+  --cds-border-interactive: var(--nepal-blue);
+  
+  // Custom spacing for government content
+  --gov-spacing-xs: 0.25rem;
+  --gov-spacing-sm: 0.5rem;
+  --gov-spacing-md: 1rem;
+  --gov-spacing-lg: 1.5rem;
+  --gov-spacing-xl: 2rem;
+  --gov-spacing-xxl: 3rem;
+  
+  // Typography tokens
+  --font-family-nepali: 'Noto Sans Devanagari', sans-serif;
+  --font-family-english: 'IBM Plex Sans', sans-serif;
+  --font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  
+  // Font sizes for Nepali text (slightly larger for better readability)
+  --font-size-nepali-12: 0.875rem; // 14px instead of 12px
+  --font-size-nepali-14: 1rem;     // 16px instead of 14px
+  --font-size-nepali-16: 1.125rem; // 18px instead of 16px
+  --font-size-nepali-18: 1.25rem;  // 20px instead of 18px
+  --font-size-nepali-20: 1.375rem; // 22px instead of 20px
+  
+  // Line heights for better Devanagari rendering
+  --line-height-nepali: 1.6;
+  --line-height-english: 1.5;
+}
+
+// Dark theme overrides
+[data-carbon-theme="g90"],
+[data-carbon-theme="g100"] {
+  --brand-primary: #4a90e2;
+  --brand-secondary: #ff6b8a;
+  --gov-primary: #4a90e2;
+  --gov-secondary: #ff6b8a;
+}
+
+// Language-specific typography
+.font-nepali {
+  font-family: var(--font-family-nepali);
+  line-height: var(--line-height-nepali);
+  
+  // Improve Devanagari rendering
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-english {
+  font-family: var(--font-family-english);
+  line-height: var(--line-height-english);
+}
+
+// Nepal Government specific component styles
+.nepal-flag-colors {
+  background: linear-gradient(to bottom, var(--nepal-red) 50%, var(--nepal-blue) 50%);
+}
+
+.gov-header {
+  background-color: var(--gov-primary);
+  color: var(--nepal-white);
+  border-bottom: 3px solid var(--gov-secondary);
+}
+
+.gov-notice {
+  border-left: 4px solid var(--gov-primary);
+  background-color: var(--cds-layer-01);
+}
+
+.gov-notice--urgent {
+  border-left-color: var(--gov-danger);
+}
+
+.gov-notice--high {
+  border-left-color: var(--gov-warning);
+}
+
+.gov-service {
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.gov-service:hover {
+  border-color: var(--gov-primary);
+  box-shadow: 0 2px 8px rgba(0, 56, 147, 0.1);
+}
+
+.gov-service--online {
+  border-left: 4px solid var(--gov-accent);
+}
+
+.gov-service--fee {
+  border-left: 4px solid var(--gov-warning);
+}
+
+// Custom Carbon component overrides
+.cds--header {
+  background-color: var(--gov-primary);
+  border-bottom: 1px solid var(--cds-border-subtle);
+}
+
+.cds--header-name {
+  color: var(--nepal-white);
+  font-weight: 600;
+}
+
+.cds--header-nav__menu-item > .cds--header-nav__menu-title,
+.cds--header-nav__menu-item > .cds--header-nav__menu-title:hover {
+  color: var(--nepal-white);
+}
+
+.cds--header-global-action {
+  color: var(--nepal-white);
+}
+
+.cds--header-global-action:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+// Button variants for government actions
+.cds--btn--gov-primary {
+  background-color: var(--gov-primary);
+  border-color: var(--gov-primary);
+  color: var(--nepal-white);
+}
+
+.cds--btn--gov-primary:hover {
+  background-color: #002066;
+  border-color: #002066;
+}
+
+.cds--btn--gov-secondary {
+  background-color: var(--gov-secondary);
+  border-color: var(--gov-secondary);
+  color: var(--nepal-white);
+}
+
+.cds--btn--gov-secondary:hover {
+  background-color: #b91c3c;
+  border-color: #b91c3c;
+}
+
+// Tag variants for notice types
+.cds--tag--notice {
+  background-color: var(--gov-primary);
+  color: var(--nepal-white);
+}
+
+.cds--tag--circular {
+  background-color: var(--gov-accent);
+  color: var(--nepal-white);
+}
+
+.cds--tag--tender {
+  background-color: var(--gov-secondary);
+  color: var(--nepal-white);
+}
+
+.cds--tag--vacancy {
+  background-color: var(--gov-info);
+  color: var(--nepal-white);
+}
+
+.cds--tag--result {
+  background-color: var(--gov-warning);
+  color: var(--cds-text-primary);
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  .gov-service,
+  .gov-notice {
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --gov-primary: #000080;
+    --gov-secondary: #8b0000;
+  }
+  
+  .cds--header {
+    border-bottom: 2px solid currentColor;
+  }
+  
+  .gov-notice,
+  .gov-service {
+    border-width: 2px;
+  }
+}
+
+// Print styles for government documents
+@media print {
+  .gov-notice,
+  .gov-service {
+    border: 1px solid #000 !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  .nepal-flag-colors {
+    background: white !important;
+    border: 1px solid #000 !important;
+  }
+  
+  .cds--header {
+    background: white !important;
+    color: black !important;
+    border-bottom: 2px solid #000 !important;
+  }
+}
+
+// Responsive typography adjustments
+@media (max-width: 672px) {
+  .font-nepali {
+    font-size: var(--font-size-nepali-14);
+  }
+  
+  .font-english {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1312px) {
+  .font-nepali {
+    font-size: var(--font-size-nepali-16);
+  }
+  
+  .font-english {
+    font-size: 1rem;
+  }
+}

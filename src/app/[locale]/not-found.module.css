@@ -1,0 +1,97 @@
+/* Page shell */
+.wrapper {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Breadcrumb strip */
+/* .crumbsBar {
+  padding: 10px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+*/
+.crumbsBar {
+  padding: 10px 24px;
+  border-bottom: 1px solid #e0e0e0;
+
+  display: flex;
+  justify-content: flex-start; /* still left-based */
+  padding-left: 150px;          /* shift over */
+}
+
+/* Grey panel behind error content */
+.panel {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 48px 24px 96px; /* room so footer never overlaps */
+}
+
+/* Scope tweaks to Carbon FullPageError only on this page */
+.fullPageError {}
+
+/* Label “Error 404” styling (stack above title) */
+.fullPageError :global(.c4p--full-page-error__label),
+.fullPageError :global(.cds--label) {
+  display: block;
+  color: #da1e28;            /* IBM Red */
+  font-size: 28px;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* IMPORTANT: no extra arrow here — keep only the one you pass via TSX if any */
+.fullPageError :global(.c4p--full-page-error__label)::before,
+.fullPageError :global(.cds--label)::before {
+  content: none !important;
+}
+
+/* Title “Page not found” */
+.fullPageError :global(.c4p--full-page-error__title),
+.fullPageError :global(h1) {
+  display: block;
+  font-size: 64px;
+  line-height: 1.1;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  color: #161616;
+}
+
+/* Description paragraph */
+.fullPageError :global(.c4p--full-page-error__description),
+.fullPageError :global(p) {
+  font-size: 16px;
+  color: #525252;
+  max-width: 620px;
+  margin: 0 0 60px 0 !important;  /* ⬅ increase bottom margin here */
+}
+
+
+/* Forwarding links block — add spacing from description */
+.nf-links {
+  margin-top: 60px;
+  display: grid;
+  gap: 8px;
+}
+.nf-links a {
+  color: #0f62fe;
+  text-decoration: none;
+}
+.nf-links a:hover { text-decoration: underline; }
+
+/* Keep the Carbon container width consistent */
+.fullPageError :global(.c4p--full-page-error) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive reduction for the big title */
+@media (max-width: 992px) {
+  .fullPageError :global(.c4p--full-page-error__title),
+  .fullPageError :global(h1) {
+    font-size: 44px;
+  }
+}

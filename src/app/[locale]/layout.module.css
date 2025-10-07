@@ -1,0 +1,51 @@
+/* Hide HeaderMain below 1200px */
+.headerMainResponsive {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .headerMainResponsive {
+    display: none;
+  }
+}
+.fontNepali {
+  font-family: var(--font-nepali);
+}
+
+.fontEnglish {
+  font-family: var(--font-sans);
+}
+
+.appLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appMain {
+  flex: 1;
+  padding: 0;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); */
+  background-color: #fff;
+
+}
+
+/* Accessibility improvements */
+.skipToContent {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--cds-background);
+  color: var(--cds-text-primary);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skipToContent:focus {
+  top: 6px;
+}
+
+

@@ -1,0 +1,2037 @@
+/* Center the dropdown icon and text in the menu button */
+.headerDropdownButtonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.headerDropdownButtonText {
+  display: flex;
+  align-items: center;
+}
+
+.headerDropdownButtonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 2.5px;
+}
+/* Header Container - Carbon UI Enhanced */
+.headerContainer {
+  position: sticky;
+  top: 0;
+  z-index: 6000;
+  background: #ffffff;
+  /* height: 500px; */
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+  /* border-bottom: 1px solid #e0e0e0; */
+  /* transition: box-shadow 0.15s ease, transform 0.15s ease; */
+}
+
+
+
+/* Government Brand Header - Top Section Enhanced */
+.headerTop {
+  background: #204fba;
+  color: #ffffff;
+  /* padding: 1rem 0; */
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  /* he */
+}
+
+
+.headerTop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.headerTop::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 20%,
+    rgba(32, 79, 186, 0.08) 60%,
+    rgba(32, 79, 186, 0.12) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.headerTop > * {
+  position: relative;
+  z-index: 3;
+}
+
+.headerTopContainer {
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  padding: 0 2rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  height: 150px;
+}
+
+/* Left Section - Government Branding */
+.headerLeftSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+  min-width: fit-content;
+  position: relative;
+  /* height: 100%; */
+  padding: 1rem 1rem 1rem 2rem;
+  background-color: #20468c;
+}
+
+/* Right Section - News Ticker, Logo and Date */
+.headerRightSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* gap: 2rem; */
+  flex: 1;
+  height: 100%;
+  padding: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerRightSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/icons/backdrop.png');
+  background-size: 80%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  filter: brightness(0) contrast(2);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.headerRightSection > * {
+  position: relative;
+  z-index: 3;
+}
+
+.headerTopBranding {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* flex: 1; */
+  min-width: 30%;
+  /* justify-content: space-between; */
+  position: relative;
+  background-color: #264F8B;
+  height: 150px;
+}
+
+/* Ensure proper spacing on desktop */
+.headerTopText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.headerNews {
+  flex: 1;
+  color: #ffffff;
+  margin-right: 2rem;
+}
+
+.headerTopLogo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  /* Removed circular background, border, and shadow styling */
+  transition: all 0.2s ease;
+}
+.headerTopLogoRight {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  /* Removed circular background, border, and shadow styling */
+  transition: all 0.2s ease;
+}
+
+.headerTopLogo:hover {
+  /* Removed hover effects since no background/border */
+  transform: scale(1.02);
+}
+
+.headerTopEmblem {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  /* Removed negative filter to allow logos to display in their original colors */
+  transition: filter 0.2s ease;
+}
+.headerTopEmblemRight {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  /* Removed negative filter to allow logos to display in their original colors */
+  transition: filter 0.2s ease;
+}
+
+/* Style for fallback Nepal emblem */
+.headerTopLogo img[src*="nepal-emblem.svg"] {
+  opacity: 1;
+}
+
+.headerTopText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.headerTopTitle {
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  letter-spacing: -0.025rem !important;
+  /* text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4); */
+}
+
+/* Specific override for Carbon HeaderName component */
+.headerTopTitle:global(.cds--header__name) {
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  letter-spacing: -0.025rem !important;
+  padding-left: 0;
+}
+
+
+.headerTopSubtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.98);
+  line-height: 1.4;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01rem;
+  /* text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3); */
+}
+
+/* Style for directorate text with line breaks */
+.headerTopSubtitle br {
+  display: block;
+  content: "";
+  margin-top: 0.25rem;
+}
+
+.headerTopSubtitle span {
+  display: inline-block;
+  line-height: 1.3;
+}
+
+/* Ensure proper spacing for directorate text */
+.headerTopSubtitle {
+  line-height: 1.4;
+}
+
+/* Add spacing between directorate lines */
+.headerTopSubtitle br + * {
+  margin-top: 0.25rem;
+}
+
+.headerTopAddress {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin-top: 0.25rem;
+  letter-spacing: 0.005rem;
+  /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3); */
+}
+
+.headerTopInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.headerTopDate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  text-align: right;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+  padding-right: 0.875rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.headerTopFlag {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.2), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 0 0 1px rgba(0, 67, 206, 0.3);
+  order: -1;
+  min-width: 60px;
+  min-height: 50px;
+}
+
+.headerTopFlag:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Main Navigation Header - Carbon UI Area */
+.headerMain {
+  background: #ffffff;
+  position: relative;
+  z-index: 5999;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Reset any conflicting styles and ensure Carbon UI components work */
+.headerMain * {
+  box-sizing: border-box;
+}
+
+/* Carbon UI Header Overrides - Enhanced Government Compliance */
+.headerMain :global(.cds--header) {
+  display: flex !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  height: 56px !important;
+  min-height: 56px !important;
+  max-height: 56px !important;
+  z-index: 5999 !important;
+  position: relative !important;
+  box-shadow: inset 0 -1px 0 #f4f4f4 !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+.headerMain :global(.cds--header__name) {
+  color: #161616 !important;
+  font-weight: 600 !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 1.1875rem !important;
+  padding-left: 1.5rem !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.01rem !important;
+  line-height: 1.25 !important;
+}
+
+.headerMain :global(.cds--header__menu-item) {
+  color: #161616 !important;
+  font-weight: 400 !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.875rem !important;
+  padding: 0 1.25rem !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  border-bottom: 3px solid transparent !important;
+  text-decoration: none !important;
+  letter-spacing: 0.005rem !important;
+  line-height: 1.25 !important;
+}
+
+.headerMain :global(.cds--header__menu-item:hover) {
+  background: linear-gradient(90deg, #e5f6ff 0%, rgba(229, 246, 255, 0.8) 100%) !important;
+  color: #0f62fe !important;
+  border-bottom-color: #0f62fe !important;
+  box-shadow: inset 0 -3px 0 #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__menu-item--current) {
+  background: linear-gradient(90deg, #e5f6ff 0%, rgba(229, 246, 255, 0.9) 100%) !important;
+  color: #0f62fe !important;
+  border-bottom: 3px solid #0f62fe !important;
+  font-weight: 600 !important;
+  box-shadow: inset 0 -3px 0 #0f62fe, inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+.headerMain :global(.cds--header__action) {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  width: 48px !important;
+  height: 48px !important;
+  color: #525252 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+.headerMain :global(.cds--header__action:hover) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__action:focus) {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+.headerMain :global(.cds--header__menu) {
+  background: transparent !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 1.25rem !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  border-bottom: 3px solid transparent !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.headerMain :global(.cds--header__menu:hover) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  border-bottom-color: #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__menu:focus) {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+.headerMain :global(.cds--header__menu--current) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  border-bottom: 3px solid #0f62fe !important;
+}
+
+/* Dropdown menu panel */
+.headerMain :global(.cds--header__submenu) {
+  background: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  min-width: 200px !important;
+  z-index: 6000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+/* Show dropdown when menu is expanded */
+.headerMain :global(.cds--header__menu[aria-expanded="true"] .cds--header__submenu) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+.headerMain :global(.cds--header__menu:hover .cds--header__submenu) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Submenu items */
+.headerMain :global(.cds--header__menu-item) {
+  color: #161616 !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.875rem !important;
+  padding: 0.75rem 1rem !important;
+  text-decoration: none !important;
+  display: block !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  border-bottom: 1px solid #f4f4f4 !important;
+  white-space: nowrap !important;
+}
+
+.headerMain :global(.cds--header__menu-item:last-child) {
+  border-bottom: none !important;
+}
+
+.headerMain :global(.cds--header__menu-item:hover) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__menu-item:focus) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+/* Critical: Ensure dropdown closes when clicking outside or losing focus */
+.headerMain :global(.cds--header__menu:not(:hover):not(:focus-within)) {
+  /* Reset dropdown state when not interacting */
+  /* kept intentionally non-empty to satisfy linters */
+  --cds-header-dropdown-state: collapsed;
+}
+
+.headerMain :global(.cds--header__menu:not(:hover):not(:focus-within) .cds--header__submenu) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) !important;
+}
+
+/* Allow time for mouse to move to submenu */
+.headerMain :global(.cds--header__submenu:hover) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Ensure dropdown stays open when hovering over submenu */
+.headerMain :global(.cds--header__menu:hover .cds--header__submenu),
+.headerMain :global(.cds--header__submenu:hover) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Hide dropdown when not expanded and not hovering */
+.headerMain :global(.cds--header__menu[aria-expanded="false"]:not(:hover) .cds--header__submenu) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) !important;
+  transition-delay: 100ms !important;
+}
+
+/* Immediate show on hover */
+.headerMain :global(.cds--header__menu:hover .cds--header__submenu) {
+  transition-delay: 0ms !important;
+}
+
+/* Prevent dropdown from interfering with other elements */
+.headerMain :global(.cds--header__submenu) {
+  pointer-events: none !important;
+}
+
+.headerMain :global(.cds--header__menu:hover .cds--header__submenu),
+.headerMain :global(.cds--header__menu[aria-expanded="true"] .cds--header__submenu),
+.headerMain :global(.cds--header__submenu:hover) {
+  pointer-events: all !important;
+}
+
+.headerMain :global(.cds--header__menu-trigger) {
+  background: transparent !important;
+  color: #161616 !important;
+  height: 48px !important;
+  padding: 0 1.25rem !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  border-bottom: 3px solid transparent !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  letter-spacing: 0.005rem !important;
+  line-height: 1.25 !important;
+  position: relative !important;
+  gap: 0.5rem !important;
+}
+
+/* Dropdown arrow styling */
+.headerMain :global(.cds--header__menu-trigger svg) {
+  width: 16px !important;
+  height: 16px !important;
+  fill: currentColor !important;
+  transition: transform 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+/* Rotate arrow when menu is expanded */
+.headerMain :global(.cds--header__menu[aria-expanded="true"] .cds--header__menu-trigger svg) {
+  transform: rotate(180deg) !important;
+}
+
+/* Ensure dropdown arrow is visible */
+.headerMain :global(.cds--header__menu-arrow) {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-left: 0.25rem !important;
+}
+
+.headerMain :global(.cds--header__menu-trigger:hover) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  border-bottom-color: #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__menu-trigger:focus) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  border-bottom-color: #0f62fe !important;
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+/* When dropdown is open */
+.headerMain :global(.cds--header__menu[aria-expanded="true"] .cds--header__menu-trigger) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  border-bottom-color: #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__global-bar) {
+  background: transparent !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.headerMain :global(.cds--header__nav) {
+  background: transparent !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Clean Minimalist Sidebar */
+.headerMain :global(.cds--side-nav) {
+  background: #ffffff !important;
+  border-right: none !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  position: fixed !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1) !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  width: 320px !important;
+  max-width: 80vw !important;
+  left: 0 !important;
+  padding-top: rem !important;
+  border-radius: 0 !important;
+}
+
+/* Close Button - Clean and Minimal */
+.sideNavHeader {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10001;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sideNavHeader:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.sideNavCloseIcon {
+  font-size: 1.5rem;
+  color: #666666;
+  font-weight: 300;
+  line-height: 1;
+  user-select: none;
+  display: block !important;
+}
+
+.sideNavHeader:focus {
+  outline: 1px solid #0f62fe;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+
+/* When expanded, slide in */
+.headerMain :global(.cds--side-nav--expanded) {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.headerMain :global(.cds--side-nav__item) {
+  border-bottom: 1px solid #f4f4f4 !important;
+}
+
+.headerMain :global(.cds--side-nav__link) {
+  color: #495057 !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  padding: 1rem 1.5rem !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-height: 52px !important;
+  border-left: none !important;
+  position: relative !important;
+  background: transparent !important;
+  border-bottom: 1px solid #f1f3f4 !important;
+}
+
+/* Remove all default arrows from all links */
+.headerMain :global(.cds--side-nav__link)::after {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__link:hover) {
+  background: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+.headerMain :global(.cds--side-nav__link--current) {
+  background: #e3f2fd !important;
+  color: #1976d2 !important;
+  font-weight: 500 !important;
+  border-left: 3px solid #1976d2 !important;
+}
+
+/* Mobile menu button - Enhanced styling */
+.headerMain :global(.cds--header__menu-btn) {
+  background: transparent !important;
+  border: none !important;
+  height: 48px !important;
+  width: 48px !important;
+  display: none !important; /* Hidden by default on desktop */
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: #161616 !important;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  border-radius: 4px !important;
+  position: relative !important;
+}
+
+.headerMain :global(.cds--header__menu-btn:hover) {
+  background: #f4f4f4 !important;
+  color: #0f62fe !important;
+}
+
+.headerMain :global(.cds--header__menu-btn[aria-expanded="true"]) {
+  background: #0f62fe !important;
+  color: #ffffff !important;
+}
+
+.headerMain :global(.cds--header__menu-btn:focus) {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+/* Hide hamburger menu action on desktop by default */
+.headerMain :global(.cds--header__action--menu) {
+  display: none !important;
+  position: relative !important;
+}
+
+/* Fix hamburger/close icon toggle states */
+.headerMain :global(.cds--header__action--menu .cds--header__menu-trigger) {
+  position: relative !important;
+  transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+/* Hamburger icon default state */
+.headerMain :global(.cds--header__action--menu .cds--header__menu-trigger svg) {
+  transition: transform 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+/* Close icon when menu is open */
+.headerMain :global(.cds--header__action--menu[aria-expanded="true"] .cds--header__menu-trigger svg) {
+  transform: rotate(45deg) !important;
+}
+
+/* Alternative approach for Carbon UI close state */
+.headerMain :global(.cds--header__action--menu.cds--header__action--active .cds--header__menu-trigger svg) {
+  transform: rotate(45deg) !important;
+}
+
+/* Ensure proper icon sizing in mobile - MASSIVE */
+.headerMain :global(.cds--header__action--menu .cds--header__menu-trigger svg) {
+  width: 32px !important;
+  height: 32px !important;
+  fill: currentColor !important;
+  stroke-width: 2.5 !important;
+}
+
+/* Mobile-specific side nav improvements */
+/* Hide headerTopInfo below 800px */
+@media (max-width: 800px) {
+  .headerTopInfo {
+    display: none !important;
+  }
+  
+  /* When headerTopInfo is hidden, news takes full width */
+  .headerNews {
+    width: 100% !important;
+    flex: 1 !important;
+  }
+  
+  .headerRightSection {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Decrease header branding text sizes for mobile */
+  
+  .headerTopTitle:global(.cds--header__name) {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    letter-spacing: -0.025rem !important;
+    padding-left: 0;
+  }
+  
+  .headerTopSubtitle {
+    font-size: 0.875rem !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+  }
+  
+  /* Ensure side nav covers appropriate space */
+  .headerMain :global(.cds--side-nav) {
+    width: 280px !important;
+    max-width: 85vw !important;
+    padding-top: 10rem;
+  }
+  
+  /* Improve side nav items on mobile */
+  .headerMain :global(.cds--side-nav__link) {
+    padding: 1rem 1.5rem !important;
+    font-size: 0.9375rem !important;
+    min-height: 48px !important;
+    border-bottom: 1px solid #f4f4f4 !important;
+  }
+  
+  /* Better touch targets */
+  .headerMain :global(.cds--side-nav__item) {
+    min-height: 48px !important;
+  }
+  
+  /* Mobile overlay improvements */
+  .headerMain :global(.cds--side-nav__overlay-active) {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    z-index: 9997 !important;
+  }
+}
+
+/* Very small mobile devices - further reduce header text sizes */
+@media (max-width: 560px) {
+  .headerTopTitle {
+    font-size: 0.875rem !important;
+    line-height: 1.1 !important;
+    margin: 0.125rem 0 0 0 !important;
+    font-weight: 600 !important;
+  }
+  
+  .headerTopTitle:global(.cds--header__name) {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    line-height: 1.1 !important;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    letter-spacing: -0.025rem !important;
+    padding-left: 0;
+  }
+  
+  .headerTopSubtitle {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+  }
+  
+  .headerRightSection {
+    min-height: 40px !important;
+    padding: 0.25rem 1rem !important;
+  }
+  
+  /* .headerTop {
+    min-height: 100px !important;
+  } */
+}
+
+/* Loading Skeleton */
+.headerSkeleton {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.headerSkeletonTop {
+  height: 80px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.headerSkeletonMain {
+  height: 48px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Enhanced responsive design */
+
+/* Desktop view - show horizontal nav, hide hamburger */
+@media (min-width: 1025px) {
+  .headerMain :global(.cds--header__nav) {
+    display: flex !important;
+  }
+
+  .headerMain :global(.cds--header__menu-btn) {
+    display: none !important;
+  }
+  
+  .headerMain :global(.cds--header__action--menu) {
+    display: none !important;
+  }
+  
+  .headerMain :global(.cds--header__menu-trigger) {
+    display: none !important;
+  }
+  
+  /* Target all possible hamburger menu selectors */
+  .headerMain :global(.cds--header__action[aria-label*="menu"]) {
+    display: none !important;
+  }
+  
+  .headerMain :global(.cds--header__action[aria-label*="Menu"]) {
+    display: none !important;
+  }
+  
+  .headerMain :global(.cds--header__action[aria-expanded]) {
+    display: none !important;
+  }
+  
+  /* Hide any hamburger icons */
+  .headerMain :global(.cds--header__action .cds--header__menu-trigger) {
+    display: none !important;
+  }
+  
+  /* Desktop: No side nav needed, use horizontal nav */
+  .headerMain :global(.cds--side-nav) {
+    display: none !important;
+  }
+}
+
+/* Mobile Controls - Hidden by default, visible on smaller screens */
+.mobileControls {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburgerMenu {
+  background: none !important;
+  border: none !important;
+  color: #ffffff !important;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  padding: 8px !important;
+}
+
+.hamburgerMenu svg {
+  width: 32px !important;
+  height: 32px !important;
+  fill: #ffffff !important;
+}
+
+/* Header Menu Button - Enhanced styling for HeaderMenuButton component */
+.headerMenuButton {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 8px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.headerMenuButton:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.headerMenuButton svg {
+  width: 36px !important;
+  /* height: 36px !important; */
+  fill: #ffffff !important;
+  /* stroke: #ffffff !important; */
+  color: #ffffff !important;
+}
+
+.languageSwitcher {
+  color: #ffffff !important;
+}
+
+/* Header Main Wrapper - Hide on smaller screens */
+.headerMainWrapper {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  /* Force enable ALL possible hamburger menu selectors for mobile */
+  .headerTop :global(.cds--header__menu-btn),
+  .headerTop :global(.cds--header__action--menu),
+  .headerTop :global(.cds--header__action),
+  .headerTop :global(.cds--header-menu-button),
+  .headerTop :global([aria-label*="menu"]),
+  .headerTop :global([aria-label*="Menu"]),
+  .headerTop :global(button[aria-label*="menu"]),
+  .headerTop :global(button[aria-label*="Menu"]),
+  .headerMain :global(.cds--header__menu-btn),
+  .headerMain :global(.cds--header__action--menu),
+  .headerMain :global(.cds--header__action),
+  .headerMain :global(.cds--header-menu-button),
+  .headerMain :global([aria-label*="menu"]),
+  .headerMain :global([aria-label*="Menu"]),
+  .headerMain :global(button[aria-label*="menu"]),
+  .headerMain :global(button[aria-label*="Menu"]) {
+    display: flex !important;
+    color: white !important;
+    background: transparent !important;
+    border: none !important;
+    width: 48px !important;
+    height: 48px !important;
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+  
+  /* Force show all header actions */
+  .headerMain :global(.cds--header__action) {
+    display: flex !important;
+  }
+  
+  /* Enable side navigation for mobile - local selectors with aggressive overrides */
+  .headerTop :global(.cds--side-nav),
+  .headerMain :global(.cds--side-nav),
+  .headerTop :global([class*="side-nav"]),
+  .headerMain :global([class*="side-nav"]),
+  .headerTop :global([data-side-nav]),
+  .headerMain :global([data-side-nav]),
+  .headerTop :global(.cds--side-nav--ux),
+  .headerMain :global(.cds--side-nav--ux),
+  .headerTop :global(.cds--side-nav__navigation),
+  .headerMain :global(.cds--side-nav__navigation) {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    bottom: auto !important;
+    height: 100vh !important;
+    width: 320px !important;
+    max-width: 320px !important;
+    min-width: 320px !important;
+    z-index: 9000 !important;
+    background: #fff !important;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1) !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+    overflow-y: auto !important;
+    /* Aggressive overrides for Carbon defaults */
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    inset-block-start: 0 !important;
+    inset-block-end: auto !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    /* Force direction */
+    direction: ltr !important;
+    transform-origin: right center !important;
+    padding: 1rem !important;
+  }
+
+  /* Show sidebar when expanded - local selectors */
+  .headerTop :global(.cds--side-nav--expanded),
+  .headerTop :global(.cds--side-nav[aria-expanded="true"]),
+  .headerTop :global([class*="side-nav"][class*="expanded"]),
+  .headerTop :global([data-side-nav-expanded="true"]),
+  .headerMain :global(.cds--side-nav--expanded),
+  .headerMain :global(.cds--side-nav[aria-expanded="true"]),
+  .headerMain :global([class*="side-nav"][class*="expanded"]),
+  .headerMain :global([data-side-nav-expanded="true"]) {
+    transform: translateX(0) !important;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1) !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  /* Backdrop overlay when sidenav is open */
+  .headerTop :global(.cds--side-nav--expanded)::before,
+  .headerMain :global(.cds--side-nav--expanded)::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 320px !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 8999 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Force override any Carbon default positioning - local selectors */
+  .headerTop :global(.cds--side-nav),
+  .headerMain :global(.cds--side-nav) {
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  /* Force override any Carbon default positioning - local selectors */
+  .headerTop :global(.cds--side-nav),
+  .headerMain :global(.cds--side-nav),
+  .headerTop :global(.cds--side-nav--ux),
+  .headerMain :global(.cds--side-nav--ux),
+  .headerTop :global(.cds--side-nav__navigation),
+  .headerMain :global(.cds--side-nav__navigation) {
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    right: 0 !important;
+  }
+  
+  /* Additional overrides to force right positioning */
+  .headerTop :global(.cds--side-nav *),
+  .headerMain :global(.cds--side-nav *) {
+    direction: ltr !important;
+  }
+  
+  /* Override any Carbon transform origins */
+  .headerTop :global(.cds--side-nav),
+  .headerMain :global(.cds--side-nav) {
+    transform-origin: right center !important;
+  }
+  
+  /* Force right-side positioning for Carbon components */
+  .headerTop :global(.cds--side-nav),
+  .headerMain :global(.cds--side-nav) {
+    left: auto !important;
+    right: 0 !important;
+  }
+  
+  /* Ensure sidebar content flows from right */
+  .headerTop :global(.cds--side-nav__content),
+  .headerMain :global(.cds--side-nav__content) {
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  /* NUCLEAR OPTION: Maximum specificity override for Carbon side navigation */
+  .headerTop.headerTop :global(.cds--side-nav.cds--side-nav),
+  .headerMain.headerMain :global(.cds--side-nav.cds--side-nav),
+  .headerTop.headerTop :global(.cds--side-nav--ux.cds--side-nav--ux),
+  .headerMain.headerMain :global(.cds--side-nav--ux.cds--side-nav--ux) {
+    right: 0 !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    transform: translateX(100%) !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+  /* NUCLEAR OPTION: Maximum specificity for expanded state */
+  .headerTop.headerTop :global(.cds--side-nav--expanded.cds--side-nav--expanded),
+  .headerMain.headerMain :global(.cds--side-nav--expanded.cds--side-nav--expanded),
+  .headerTop.headerTop :global(.cds--side-nav.cds--side-nav[aria-expanded="true"]),
+  .headerMain.headerMain :global(.cds--side-nav.cds--side-nav[aria-expanded="true"]) {
+    transform: translateX(0) !important;
+    right: 0 !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+  }
+  
+  /* ULTIMATE OVERRIDE: Target our custom class */
+  .rightSideNav {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 320px !important;
+    height: 100vh !important;
+    z-index: 9000 !important;
+    background: #fff !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+    /* Force all positioning properties */
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    border-left: 1px solid #e0e0e0 !important;
+    padding-top: 3rem;
+  }
+  
+  /* Custom class expanded state */
+  .rightSideNav:global(.cds--side-nav--expanded),
+  .rightSideNav[aria-expanded="true"] {
+    transform: translateX(0) !important;
+  }
+  /* Overlay for sidebar */
+  .headerTop :global(.cds--side-nav__overlay),
+  .headerMain :global(.cds--side-nav__overlay) {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 8999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: opacity 0.3s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  }
+  
+  /* Sidebar overlay */
+  .headerMain :global(.cds--side-nav__overlay) {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 7999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  }
+  
+  /* Show overlay when sidebar is expanded */
+  .headerMain :global(.cds--side-nav--expanded .cds--side-nav__overlay) {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Sidebar content styling */
+  .headerMain :global(.cds--side-nav__items) {
+    padding-top: 6rem !important; /* Space for close button */
+    margin-top: 5rem !important;
+  }
+  
+  .headerMain :global(.cds--side-nav__menu-item) {
+    color: #161616 !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+  }
+  
+  .headerMain :global(.cds--side-nav__menu-item:hover) {
+    background: #f4f4f4 !important;
+  }
+  
+  .headerMain :global(.cds--side-nav__submenu-item) {
+    color: #525252 !important;
+    padding: 0.5rem 2rem !important;
+    background: #f9f9f9 !important;
+  }
+  
+  /* Hide horizontal navigation */
+  .headerMain :global(.cds--header__nav) {
+    display: none !important;
+  }
+  
+  .headerTopContainer {
+    /* padding: 0 1.5rem 0 0; */
+    padding: 0;
+    gap: 0;
+    flex-direction: column;
+    height: 100%;
+  }
+  .headerTop{
+    min-height: 250px;
+  }
+  
+  .headerLeftSection {
+    width: 100%;
+    order: 2;
+    padding: 1rem 1rem 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .headerRightSection {
+    width: 100%;
+    order: 1;
+    padding: 0.5rem 2rem;
+    background-color: rgba(32, 79, 186, 0.1);
+    min-height: 60px;
+    height: auto;
+  }
+  .headerNews{
+      flex: 1;
+      min-width: 0;
+  }
+  .headerTopInfo {
+      flex: 0 0 auto;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      min-width: 200px;
+    }
+  .headerTopLogoRight {
+  width: 50px;
+  height: 50px;
+  /* Removed circular background, border, and shadow styling */
+  transition: all 0.2s ease;
+}
+.headerTopEmblemRight {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  /* Removed negative filter to allow logos to display in their original colors */
+  transition: filter 0.2s ease;
+}
+  /* Show mobile controls on smaller screens - positioned on the right */
+  .mobileControls {
+    display: flex;
+    flex-shrink: 0;
+  }
+  
+  /* Hide main header navigation on smaller screens */
+  .headerMainWrapper {
+    display: none;
+  }
+  
+  .headerTopBranding {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet and mobile breakpoint */
+
+
+
+/*  */
+
+/* Critical fix for overlapping issues */
+.headerMain :global(.cds--header__menu-trigger svg),
+.headerMain :global(.cds--header__action svg) {
+  flex-shrink: 0 !important;
+}
+
+/* Ensure proper spacing */
+.headerMain :global(.cds--header__name) {
+  flex-shrink: 0 !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Fix global bar spacing */
+.headerMain :global(.cds--header__global-bar) {
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+/* This section consolidated with the main desktop media query above */
+
+@media (max-width: 1024px) {
+  .headerMain :global(.cds--side-nav--expanded) ~ * {
+    margin-left: 0 !important;
+  }
+  
+  /* Mobile side nav overlay - Enhanced */
+  .headerMain :global(.cds--side-nav--expanded) {
+    position: fixed !important;
+    z-index: 9999 !important;
+    left: 0 !important;
+    transform: translateX(0) !important;
+    transition: transform 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  }
+  
+  .headerMain :global(.cds--side-nav__overlay) {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 9998 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(2px) !important;
+    opacity: 1 !important;
+    transition: opacity 0.11s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  }
+  
+  /* When side nav is closed */
+  .headerMain :global(.cds--side-nav:not(.cds--side-nav--expanded)) {
+    transform: translateX(-100%) !important;
+  }
+  
+  /* Visual feedback when side nav is open - hamburger button state */
+  .headerMain :global(.cds--header__action--menu[aria-expanded="true"]) {
+    background: #e5f6ff !important;
+    color: #0f62fe !important;
+  }
+}
+
+/* Fix side nav overlay */
+.headerMain :global(.cds--side-nav__overlay) {
+  z-index: 9999 !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  backdrop-filter: blur(8px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(180%) !important;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Ensure overlay is visible when side nav is expanded */
+.headerMain :global(.cds--side-nav--expanded) ~ :global(.cds--side-nav__overlay),
+.headerMain :global(.cds--side-nav__overlay-active) {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Body scroll lock when nav is open */
+body:has(.headerMain :global(.cds--side-nav--expanded)) {
+  overflow: hidden !important;
+}
+
+/* Add subtle animation to hamburger icon */
+.headerMain :global(.cds--header__action--menu[aria-expanded="true"] svg) {
+  transform: rotate(90deg) !important;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+.headerMain :global(.cds--header__action--menu svg) {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.38, 0.9) !important;
+}
+
+/* Clean side navigation items */
+.headerMain :global(.cds--side-nav__item) {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+
+.headerMain :global(.cds--side-nav__item:last-child) {
+  border-bottom: none !important;
+}
+
+/* Clean Menu Items - No Icons */
+.headerMain :global(.cds--side-nav__menu) {
+  background: transparent !important;
+  border: none !important;
+}
+
+.headerMain :global(.cds--side-nav__menu-item) {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+/* Hide Carbon UI default icons completely */
+.headerMain :global(.cds--side-nav__icon) {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__menu .cds--side-nav__icon) {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__menu-item .cds--side-nav__icon) {
+  display: none !important;
+}
+
+/* Show dropdown arrow for parent menu items that have submenus */
+.headerMain :global(.cds--side-nav__menu > .cds--side-nav__link) {
+  justify-content: space-between !important;
+}
+
+.headerMain :global(.cds--side-nav__menu > .cds--side-nav__link)::after {
+  content: '▼' !important;
+  display: block !important;
+  font-size: 0.75rem !important;
+  color: #999999 !important;
+  transition: all 0.2s ease !important;
+  margin-left: auto !important;
+  transform: rotate(-90deg) !important;
+  font-weight: 400 !important;
+}
+
+.headerMain :global(.cds--side-nav__menu[aria-expanded="true"] > .cds--side-nav__link)::after {
+  transform: rotate(0deg) !important;
+  color: #666666 !important;
+}
+
+/* Clean Submenu Items */
+.headerMain :global(.cds--side-nav__submenu) {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu-item) {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link) {
+  padding: 0.875rem 1.5rem 0.875rem 2.5rem !important;
+  font-size: 0.875rem !important;
+  color: #6c757d !important;
+  background: transparent !important;
+  border-bottom: 1px solid #f8f9fa !important;
+  min-height: 44px !important;
+  justify-content: flex-start !important;
+}
+
+/* Make sure submenu items never have arrows */
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link)::after {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link:hover) {
+  background: #f1f3f4 !important;
+  color: #495057 !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link--current) {
+  background: #e8f4fd !important;
+  color: #1976d2 !important;
+  font-weight: 500 !important;
+  border-left: 2px solid #1976d2 !important;
+}
+
+.headerMain :global(.cds--side-nav__item:last-child) {
+  border-bottom: none !important;
+}
+
+/* Clean Menu Items - No Icons */
+.headerMain :global(.cds--side-nav__menu) {
+  background: transparent !important;
+  border: none !important;
+}
+
+.headerMain :global(.cds--side-nav__menu-item) {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+/* Hide Carbon UI default icons completely */
+.headerMain :global(.cds--side-nav__icon) {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__menu .cds--side-nav__icon) {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__menu-item .cds--side-nav__icon) {
+  display: none !important;
+}
+
+/* Show dropdown arrow for parent menu items that have submenus */
+.headerMain :global(.cds--side-nav__menu > .cds--side-nav__link) {
+  justify-content: space-between !important;
+}
+
+.headerMain :global(.cds--side-nav__menu > .cds--side-nav__link)::after {
+  content: '▼' !important;
+  display: block !important;
+  font-size: 0.75rem !important;
+  color: #999999 !important;
+  transition: all 0.2s ease !important;
+  margin-left: auto !important;
+  transform: rotate(-90deg) !important;
+  font-weight: 400 !important;
+}
+
+.headerMain :global(.cds--side-nav__menu[aria-expanded="true"] > .cds--side-nav__link)::after {
+  transform: rotate(0deg) !important;
+  color: #666666 !important;
+}
+
+/* Clean Submenu Items */
+.headerMain :global(.cds--side-nav__submenu) {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu-item) {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link) {
+  padding: 0.875rem 1.5rem 0.875rem 2.5rem !important;
+  font-size: 0.875rem !important;
+  color: #6c757d !important;
+  background: transparent !important;
+  border-bottom: 1px solid #f8f9fa !important;
+  min-height: 44px !important;
+  justify-content: flex-start !important;
+}
+
+/* Make sure submenu items never have arrows */
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link)::after {
+  display: none !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link:hover) {
+  background: #f1f3f4 !important;
+  color: #495057 !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link--current) {
+  background: #e8f4fd !important;
+  color: #1976d2 !important;
+  font-weight: 500 !important;
+  border-left: 2px solid #1976d2 !important;
+}
+
+/* Side navigation submenu styling */
+.headerMain :global(.cds--side-nav__submenu) {
+  background: #f4f4f4 !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu-item) {
+  background: transparent !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link) {
+  padding-left: 2.5rem !important;
+  font-size: 0.8125rem !important;
+  color: #525252 !important;
+}
+
+.headerMain :global(.cds--side-nav__submenu .cds--side-nav__link:hover) {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+  border-left: 3px solid #0f62fe !important;
+  padding-left: calc(2.5rem - 3px) !important;
+}
+
+/* Enhanced Navigation Dropdown Styles */
+.headerMain :global(.cds--header__nav) {
+  background: transparent;
+}
+
+.headerMain :global(.cds--header__nav-item) {
+  position: relative;
+}
+
+.headerMain :global(.cds--header__nav-item:hover) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.headerMain :global(.cds--header__nav-item--active) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* HeaderMenu Dropdown Styling */
+.headerMain :global(.cds--header__menu) {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  margin-top: 0;
+}
+
+.headerMain :global(.cds--header__menu:hover) {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
+}
+
+.headerMain :global(.cds--header__menu-item) {
+  border-bottom: 1px solid #f4f4f4;
+  transition: all 0.15s ease;
+}
+
+.headerMain :global(.cds--header__menu-item:last-child) {
+  border-bottom: none;
+}
+
+.headerMain :global(.cds--header__menu-item:hover) {
+  background: #f4f4f4;
+}
+
+.headerMain :global(.cds--header__menu-item--active) {
+  background: #e5f6ff;
+  border-left: 3px solid #0f62fe;
+}
+
+.headerMain :global(.cds--header__menu-item a) {
+  color: #161616;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.headerMain :global(.cds--header__menu-item a:hover) {
+  color: #0f62fe;
+}
+
+.headerMain :global(.cds--header__menu-item--active a) {
+  color: #0f62fe;
+  font-weight: 600;
+}
+
+
+
+
+/* Responsive Dropdown Adjustments */
+@media (max-width: 1024px) {
+  .headerMain :global(.cds--header__menu) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerMain :global(.cds--header__menu) {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+}
+
+/* Custom Header Dropdown Menu Styles */
+.headerMenuDropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Dropdown button styling to match HeaderMenuItem */
+.headerDropdownButton {
+  background: transparent !important;
+  border: none !important;
+  color: #161616 !important;
+  box-shadow: none !important;
+}
+
+.headerDropdownButton:hover {
+  background: #e5e5e5 !important;
+  color: #161616 !important;
+}
+
+.headerDropdownButton:focus {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+  background: #e5e5e5 !important;
+}
+
+/* Override Carbon UI global styles for dropdown triggers */
+.headerMenuDropdown :global(.cds--header__menu-item) {
+  background: transparent !important;
+  color: #161616 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.headerMenuDropdown :global(.cds--header__menu-item):hover {
+  background: #e5e5e5 !important;
+  color: #161616 !important;
+}
+
+.headerMenuDropdown :global(.cds--header__menu-item):focus {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+  background: #e5e5e5 !important;
+}
+
+.headerDropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  background: #ffffff;
+  border: 1px solid #c6c6c6;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  min-width: 160px;
+  padding: 0;
+  margin-top: 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  animation: fadeIn 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headerDropdownMenuItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #161616;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  border-bottom: none;
+  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  white-space: nowrap;
+  background: #ffffff;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.headerDropdownMenuItem:hover {
+  background: #e5e5e5;
+  color: #161616;
+}
+
+.headerDropdownMenuItem:focus {
+  outline: 2px solid #0f62fe;
+  outline-offset: -2px;
+  background: #e5e5e5;
+  color: #161616;
+}
+
+.headerDropdownMenuItem:active {
+  background: #c6c6c6;
+}
+
+/* Ensure dropdown appears above other elements */
+.headerMain :global(.cds--header__nav) {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Make sure dropdown container has proper positioning context */
+.headerMenuDropdown {
+  position: relative;
+  z-index: 1001;
+}
+
+.headerDropdownMenu {
+  z-index: 1002;
+}
+
+/* Additional Carbon UI compliance */
+.headerMenuDropdown :global(.cds--header__menu-item[aria-expanded="true"]) {
+  background: #e5e5e5 !important;
+}
+
+/* Ensure proper focus ring for accessibility */
+.headerDropdownButton:focus-visible {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+.headerDropdownMenuItem:focus-visible {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+/* Enhanced Carbon UI accessibility and focus states */
+.headerMain :global(.cds--header__action):focus-visible,
+.headerMain :global(.cds--header__menu-item):focus-visible,
+.headerMain :global(.cds--header__name):focus-visible,
+.headerMain :global(.cds--side-nav__link):focus-visible {
+  outline: 2px solid #0f62fe !important;
+  outline-offset: -2px !important;
+}
+
+/* Custom SideNav Dropdown Styles */
+.sideNavMenuWrapper {
+  width: 100%;
+}
+
+.sideNavMenuTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  color: #161616;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  transition: background-color 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sideNavMenuTitle:hover {
+  background-color: #e8f4fd;
+}
+
+.sideNavMenuTitle:focus {
+  outline: 2px solid #0f62fe;
+  outline-offset: -2px;
+}
+
+.sideNavMenuExpanded {
+  background-color: #e8f4fd;
+  font-weight: 600;
+}
+
+.sideNavMenuChevron {
+  transition: transform 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
+  font-size: 0.75rem;
+  color: #525252;
+}
+
+.sideNavMenuChevronExpanded {
+  transform: rotate(180deg);
+}
+
+.sideNavSubmenu {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sideNavSubmenu :global(.cds--side-nav__link) {
+  padding-left: 2rem !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.sideNavSubmenu :global(.cds--side-nav__link):hover {
+  background-color: #e8f4fd !important;
+}
+
+.sideNavSubmenu :global(.cds--side-nav__link):last-child {
+  border-bottom: none !important;
+}
+
+/* Improved keyboard navigation */
+.headerMain :global(.cds--header__action):focus,
+.headerMain :global(.cds--header__menu-item):focus {
+  background: #e5f6ff !important;
+  color: #0f62fe !important;
+}
+
+/* Motion preferences respect */
+@media (prefers-reduced-motion: reduce) {
+  .headerMain :global(*),
+  .headerMain *,
+  .headerDropdownMenu,
+  .headerMain :global(.cds--side-nav),
+  .headerMain :global(.cds--side-nav__overlay) {
+    transition: none !important;
+    animation: none !important;
+  }
+}

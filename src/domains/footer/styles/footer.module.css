@@ -1,0 +1,402 @@
+/* Footer Styles - Following Carbon Design System and matching the screenshot */
+
+/* Main Footer Container */
+.footerContainer {
+  background: #24467e;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerContainer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: url('/icons/backdrop.png') no-repeat center bottom;
+  background-size: contain;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Footer Skeleton - Removed to prevent hydration issues */
+.footerContactInfoInline{
+  display: inline;
+}
+
+.footerInfoRow{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+}
+/* Footer Top Section */
+.footerTop {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerTopContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerTopBranding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footerTopLogo {
+  flex-shrink: 0;
+}
+
+.footerTopEmblem {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.footerTopText {
+  flex: 1;
+  text-align: center;
+}
+
+.footerTopSubtitle {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.footerTopTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.footerTopAddress {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+/* Footer Main Section */
+.footerMain {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerMainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Office Hours Section */
+.footerOfficeHours {
+  padding-right: 2rem;
+}
+
+.footerSectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.footerOfficeHoursGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.footerOfficeHoursSeasonTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.footerOfficeHoursSchedule {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.75rem; */
+}
+
+.footerOfficeHoursDay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0.5rem 0; */
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.footerOfficeHoursDay:last-child {
+  border-bottom: none;
+}
+
+.footerOfficeHoursDayName {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.footerOfficeHoursTime {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+}
+
+/* Important Links Section */
+.footerImportantLinks {
+  padding-left: 2rem;
+}
+
+.footerLinksGrid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr;
+  gap: 2rem; */
+}
+
+.footerLinksColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLinksTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footerLinksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinksItem {
+  margin-bottom: 0.5rem;
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.footerLink:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer Bottom Section */
+.footerBottom {
+  padding: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.footerBottomContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerBottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footerContactInfoInline{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:1.5rem;
+}
+
+/* Social Media */
+.footerSocialMedia {
+  display: flex;
+  gap: 1rem;
+}
+
+.footerSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footerSocialLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Contact Information */
+.footerContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerContactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+}
+
+.footerContactIcon {
+  color: rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.footerContactText {
+  color: #b0b0b0;
+}
+
+.footerContactEmail {
+  color: #b0b0b0;
+}
+
+.footerContactPhone {
+  color: #b0b0b0;
+}
+
+/* Chat Button */
+.footerBottomRight {
+  flex-shrink: 0;
+}
+
+.footerChatButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.footerChatButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.footerChatButton:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footerMainContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footerOfficeHours {
+    padding-right: 0;
+  }
+  
+  .footerImportantLinks {
+    padding-left: 0;
+  }
+  
+  .footerLinksGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerTopBranding {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .footerTopLogo {
+    order: -1;
+  }
+  
+  .footerBottomContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .footerBottomLeft {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footerContactInfo {
+    align-items: center;
+  }
+  
+  .footerTopEmblem {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .footerTopTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerTop,
+  .footerMain,
+  .footerBottom {
+    padding: 1rem 0;
+  }
+  
+  .footerTopContainer,
+  .footerMainContainer,
+  .footerBottomContainer {
+    padding: 0 0.5rem;
+  }
+  
+  .footerTopEmblem {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footerTopTitle {
+    font-size: 1.1rem;
+  }
+  
+  .footerSectionTitle {
+    font-size: 1.1rem;
+  }
+}

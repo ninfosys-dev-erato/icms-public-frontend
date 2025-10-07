@@ -1,0 +1,120 @@
+// Nepal Government Theme Overrides for Carbon Design System
+
+:root {
+  // Primary colors - Nepal Flag colors
+  --nepal-blue: #003893;
+  --nepal-red: #DC143C;
+  --nepal-white: #FFFFFF;
+  
+  // Extended palette
+  --nepal-blue-light: #1E5AA8;
+  --nepal-blue-dark: #002B7A;
+  --nepal-red-light: #E53E3E;
+  --nepal-red-dark: #C53030;
+  
+  // Neutral colors
+  --nepal-gray-100: #F7FAFC;
+  --nepal-gray-200: #EDF2F7;
+  --nepal-gray-300: #E2E8F0;
+  --nepal-gray-400: #CBD5E0;
+  --nepal-gray-500: #A0AEC0;
+  --nepal-gray-600: #718096;
+  --nepal-gray-700: #4A5568;
+  --nepal-gray-800: #2D3748;
+  --nepal-gray-900: #1A202C;
+}
+
+// Override Carbon theme variables
+[data-carbon-theme='g10'] {
+  // Primary interactive color - Nepal Blue
+  --cds-interactive-01: var(--nepal-blue);
+  --cds-interactive-01-hover: var(--nepal-blue-light);
+  --cds-interactive-01-active: var(--nepal-blue-dark);
+  
+  // Secondary interactive color - Nepal Red for important actions
+  --cds-interactive-02: var(--nepal-red);
+  --cds-interactive-02-hover: var(--nepal-red-light);
+  --cds-interactive-02-active: var(--nepal-red-dark);
+  
+  // Focus color
+  --cds-focus: var(--nepal-blue);
+  
+  // Link colors
+  --cds-link-primary: var(--nepal-blue);
+  --cds-link-primary-hover: var(--nepal-blue-light);
+  
+  // Support colors for government context
+  --cds-support-info: var(--nepal-blue);
+  --cds-support-success: #38A169;
+  --cds-support-warning: #D69E2E;
+  --cds-support-error: var(--nepal-red);
+}
+
+// Dark theme support
+[data-carbon-theme='g90'] {
+  --cds-interactive-01: var(--nepal-blue-light);
+  --cds-interactive-01-hover: #4A90C2;
+  --cds-interactive-01-active: var(--nepal-blue);
+  
+  --cds-interactive-02: var(--nepal-red-light);
+  --cds-interactive-02-hover: #FF6B6B;
+  --cds-interactive-02-active: var(--nepal-red);
+  
+  --cds-focus: var(--nepal-blue-light);
+  --cds-link-primary: var(--nepal-blue-light);
+  --cds-link-primary-hover: #4A90C2;
+}
+
+// Government specific component styles
+.gov-header {
+  background: linear-gradient(135deg, var(--nepal-blue) 0%, var(--nepal-blue-dark) 100%);
+  color: var(--nepal-white);
+  box-shadow: 0 2px 8px rgba(0, 56, 147, 0.2);
+}
+
+.gov-footer {
+  background-color: var(--nepal-gray-800);
+  color: var(--nepal-white);
+  border-top: 3px solid var(--nepal-red);
+}
+
+.gov-card {
+  border-left: 4px solid var(--nepal-blue);
+  
+  &.priority {
+    border-left-color: var(--nepal-red);
+  }
+}
+
+.gov-badge {
+  &.official {
+    background-color: var(--nepal-blue);
+    color: var(--nepal-white);
+  }
+  
+  &.urgent {
+    background-color: var(--nepal-red);
+    color: var(--nepal-white);
+  }
+}
+
+// Accessibility enhancements for government sites
+.high-contrast {
+  --cds-text-primary: #000000;
+  --cds-background: #FFFFFF;
+  --cds-interactive-01: #0000FF;
+  --cds-interactive-02: #FF0000;
+}
+
+// Print-specific government styling
+@media print {
+  .gov-header::after {
+    content: "Government of Nepal - गवर्नमेन्ट अफ नेपाल";
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+  }
+}

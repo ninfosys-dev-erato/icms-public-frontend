@@ -1,0 +1,259 @@
+{
+  "common": {
+    "loading": "लोड हुँदै...",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "search": "खोज्नुहोस्",
+    "readMore": "थप पढ्नुहोस्",
+    "downloadPdf": "PDF डाउनलोड गर्नुहोस्",
+    "viewDetails": "विस्तृत विवरण हेर्नुहोस्",
+    "goBack": "फर्केर जानुहोस्",
+    "close": "बन्द गर्नुहोस्",
+    "submit": "पेश गर्नुहोस्",
+    "cancel": "रद्द गर्नुहोस्",
+    "save": "सुरक्षित गर्नुहोस्",
+    "edit": "सम्पादन गर्नुहोस्",
+    "delete": "मेटाउनुहोस्",
+    "confirm": "पुष्टि गर्नुहोस्",
+    "yes": "हो",
+    "no": "होइन",
+    "switchToLatinNumerals": "ल्याटिन अंकहरूमा परिवर्तन गर्नुहोस्",
+    "switchToDevanagariNumerals": "देवनागरी अंकहरूमा परिवर्तन गर्नुहोस्"
+  },
+  "navigation": {
+    "siteTitle": "सरकारी कार्यालय",
+    "openMenu": "मेनु खोल्नुहोस्",
+    "mainNavigation": "मुख्य नेविगेशन",
+    "search": "खोज्नुहोस्",
+    "userAccount": "प्रयोगकर्ता खाता",
+    "sideNavigation": "छेउ नेविगेशन",
+    "home": "गृह पृष्ठ",
+    "about": "हाम्रो बारेमा",
+    "news": "समाचार",
+    "notices": "सूचना",
+    "documents": "कार्यालय विवरणहरू",
+    "services": "सेवाहरू",
+    "contact": "सम्पर्क",
+    "faq": "बारम्बार सोधिने प्रश्नहरू"
+  },
+  "notices": {
+    "title": "सूचनाहरू",
+    "all": "सबै सूचनाहरू",
+    "tenders": "टेन्डरहरू",
+    "vacancies": "रिक्त स्थानहरू",
+    "results": "परिणामहरू"
+  },
+  "services": {
+    "title": "सेवाहरू",
+    "all": "सबै सेवाहरू",
+    "online": "अनलाइन सेवाहरू",
+    "certificates": "प्रमाणपत्रहरू",
+    "licenses": "लाइसेन्सहरू"
+  },
+  
+  "directory": {
+    "title": "निर्देशिका",
+    "offices": "कार्यालयहरू",
+    "people": "व्यक्तिहरू",
+    "localLevels": "स्थानीय तहहरू"
+  },
+  "header": {
+    "govNepal": "नेपाल सरकार",
+    "ministry": "मन्त्रालय",
+    "department": "विभाग",
+    "localGov": "स्थानीय तह",
+    "languageSwitch": "भाषा परिवर्तन",
+    "nepali": "नेपाली",
+    "english": "अंग्रेजी"
+  },
+  "footer": {
+    "quickLinks": "द्रुत लिंकहरू",
+    "importantLinks": "महत्वपूर्ण लिंकहरू",
+    "contactInfo": "सम्पर्क जानकारी",
+    "address": "ठेगाना",
+    "phone": "फोन",
+    "email": "इमेल",
+    "website": "वेबसाइट",
+    "socialMedia": "सामाजिक सञ्जाल",
+    "copyright": "सर्वाधिकार सुरक्षित",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfUse": "प्रयोगका सर्तहरू"
+  },
+  "home": {
+    "welcome": "स्वागतम्",
+    "latestNews": "ताजा समाचार",
+    "latestNotices": "ताजा सूचनाहरू",
+    "importantDocuments": "महत्वपूर्ण कागजातहरू",
+    "quickServices": "द्रुत सेवाहरू",
+    "popularDownloads": "लोकप्रिय डाउनलोडहरू"
+  },
+  "search": {
+    "placeholder": "खोज्नुहोस्...",
+    "results": "खोज परिणामहरू",
+    "noResults": "कुनै परिणाम फेला परेन",
+    "searchFor": "यसको लागि खोज्नुहोस्:"
+  },
+  "slider": {
+    "errorMessage": "स्लाइडर सामग्री लोड गर्न असफल",
+    "noSliders": "कुनै स्लाइडर सामग्री उपलब्ध छैन",
+    "sliderRegion": "छवि स्लाइडर",
+    "nextSlide": "अर्को स्लाइड",
+    "previousSlide": "अघिल्लो स्लाइड",
+    "slide": "स्लाइड",
+    "of": "मध्ये",
+    "views": "देखिएको",
+    "clicks": "क्लिक",
+    "filters": "फिल्टरहरू",
+    "sortBy": "क्रमबद्ध गर्नुहोस्",
+    "relevance": "प्रासंगिकता",
+    "date": "मिति",
+    "title": "शीर्षक",
+    "employeeError": "कर्मचारी जानकारी लोड गर्न असफल",
+    "noEmployees": "कुनै कर्मचारी जानकारी उपलब्ध छैन"
+  },
+  "content": {
+    "publishedOn": "प्रकाशित मिति",
+    "lastUpdated": "अन्तिम अपडेट",
+    "category": "श्रेणी",
+    "tags": "ट्यागहरू",
+    "relatedContent": "सम्बन्धित सामग्री",
+    "attachments": "संलग्नकहरू",
+    "downloadCount": "डाउनलोड संख्या"
+  },
+  "forms": {
+    "name": "नाम",
+    "email": "इमेल",
+    "phone": "फोन नम्बर",
+    "message": "सन्देश",
+    "subject": "विषय",
+    "required": "आवश्यक",
+    "optional": "वैकल्पिक",
+    "submit": "पेश गर्नुहोस्",
+    "sending": "पठाउँदै...",
+    "sent": "पठाइयो",
+    "error": "त्रुटि भयो"
+  },
+  "content": {
+    "publishedOn": "प्रकाशित मिति",
+    "lastUpdated": "अन्तिम अपडेट",
+    "category": "श्रेणी",
+    "tags": "ट्यागहरू",
+    "relatedContent": "सम्बन्धित सामग्री",
+    "attachments": "संलग्नकहरू",
+    "downloadCount": "डाउनलोड संख्या",
+    "notFound": {
+      "title": "सामग्री फेला परेन",
+      "description": "तपाईं खोजिरहनु भएको सामग्री फेला परेन।",
+      "actions": {
+        "backToHome": "गृहपृष्ठमा फर्कनुहोस्"
+      }
+    }
+  },
+  "media": {
+    "gallery": {
+      "title": "फोटोहरू",
+      "description": "हाम्रो गतिविधिहरू र कार्यक्रमहरू देखाउने फोटोहरूको संग्रह अन्वेषण गर्नुहोस्",
+      "viewAll": "थप हेर्नुहोस्",
+      "loading": "ग्यालेरी लोड हुँदैछ...",
+      "error": "ग्यालेरी फोटोहरू लोड गर्न सकिएन",
+      "noPhotos": "कुनै फोटो उपलब्ध छैन",
+      "noPhotosDescription": "हाल ग्यालेरीमा कुनै फोटोहरू छैनन्।",
+      "photoCount": "{count, plural, =0 {कुनै फोटो छैन} =1 {१ फोटो} other {# फोटोहरू}}",
+      "view": "हेर्नुहोस्",
+      "download": "डाउनलोड गर्नुहोस्",
+      "share": "साझा गर्नुहोस्",
+      "filtersTitle": "फिल्टरहरू",
+      "search": "फोटोहरू खोज्नुहोस्...",
+      "searchPlaceholder": "शीर्षक, विवरण, वा ट्यागहरूद्वारा खोज्नुहोस्...",
+      "tags": "ट्यागहरू",
+      "allTags": "सबै ट्यागहरू",
+      "reset": "फिल्टरहरू रिसेट गर्नुहोस्"
+    }
+  },
+  "homepage": {
+    "introduction": {
+      "read_more": "थप पढ्नुहोस्"
+    },
+    "hero": {
+      "title": "हाम्रो कार्यालयमा स्वागत छ!",
+      "description": "हामी हाम्रो समुदायलाई उत्कृष्ट सेवामा समर्पित छौं।",
+      "cta": "थप जान्नुहोस्"
+    }
+  },
+  "hr": {
+    "title": "हाम्रो टोली",
+    "description": "विभिन्न विभागहरूमा कार्यरत हाम्रो समर्पित पेशेवरहरूको टोली",
+    "loading": "टोली जानकारी लोड हुँदैछ...",
+    "error": "टोली जानकारी लोड गर्न सकिएन",
+    "noEmployees": "कुनै कर्मचारी फेला परेनन्",
+    "noEmployeesDescription": "तपाईंको खोजसँग मेल खाने कुनै कर्मचारी हाल छैनन्।",
+    "totalDepartments": "कुल विभागहरू",
+    "totalEmployees": "कुल कर्मचारीहरू",
+    "employeesWithPhotos": "फोटोसहितका कर्मचारीहरू",
+    "departmentsWithEmployees": "सक्रिय विभागहरू",
+    "filters": {
+      "filtersTitle": "फिल्टरहरू",
+      "search": "कर्मचारीहरू खोज्नुहोस्...",
+      "searchPlaceholder": "नाम, पद, वा सम्पर्कद्वारा खोज्नुहोस्...",
+      "department": "विभाग",
+      "allDepartments": "सबै विभागहरू",
+      "allPositions": "सबै पदहरू",
+      "reset": "फिल्टरहरू रिसेट गर्नुहोस्"
+    },
+    "departments": {
+      "order": "क्रम",
+      "active": "सक्रिय",
+      "inactive": "निष्क्रिय",
+      "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैन} =1 {१ कर्मचारी} other {# कर्मचारीहरू}}"
+    },
+    "employees": {
+      "photo": "फोटो",
+      "name": "नाम",
+      "phone": "फोन",
+      "department": "विभाग",
+      "position": "पद"
+    }
+  },
+  "calendar": {
+    "bs": "बि.स.",
+    "ad": "इ.स.",
+    "nepaliCalendar": "नेपाली पात्रो",
+    "englishCalendar": "अंग्रेजी पात्रो"
+  },
+  "office": {
+    "introduction": "परिचय",
+    "objective": "उद्देश्य",
+    "workDetails": "कार्य विवरण",
+    "organizationalStructure": "संगठनात्मक संरचना",
+    "digitalCharter": "डिजिटल चार्टर",
+    "employeeSanctions": "कर्मचारी स्वीकृति",
+    "departments": "विभागहरू",
+    "employees": "कर्मचारीहरू"
+  },
+  "documents": {
+    "title": "कागजातहरू",
+    "acts": "ऐनहरू",
+    "rules": "नियमहरू",
+    "policies": "नीतिहरू",
+    "forms": "फारमहरू",
+    "types": {
+      "PDF": "PDF",
+      "DOC": "वर्ड डकुमेन्ट",
+      "DOCX": "वर्ड डकुमेन्ट",
+      "XLS": "एक्सेल फाइल",
+      "XLSX": "एक्सेल फाइल",
+      "PPT": "प्रेजेन्टेसन",
+      "PPTX": "प्रेजेन्टेसन"
+    },
+    "categories": {
+      "OFFICIAL": "आधिकारिक",
+      "REPORT": "प्रतिवेदन",
+      "FORM": "फारम",
+      "POLICY": "नीति",
+      "PROCEDURE": "कार्यविधि",
+      "GUIDELINE": "निर्देशिका",
+      "NOTICE": "सूचना",
+      "CIRCULAR": "परिपत्र"
+    }
+  }
+}

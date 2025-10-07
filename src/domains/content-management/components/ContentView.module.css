@@ -1,0 +1,496 @@
+.contentContainer {
+  /* background: #ffffff; */
+  /* border-radius: 0.5rem; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); */
+  overflow: hidden;
+  /* border: 1px solid #e0e0e0; */
+  /* Ensure no unexpected large elements */
+  position: relative;
+  max-width: 100%;
+}
+
+/* Reset any global styles that might affect content */
+.contentContainer * {
+  box-sizing: border-box;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.mainContent {
+  /* padding: 2rem; */
+  /* Ensure content is properly constrained */
+  max-width: 90%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Prevent any large background elements */
+.mainContent > * {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Ensure the main content area is clean */
+.mainContent article {
+  position: relative !important;
+  z-index: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.mainContent{
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+.titlePrintShare{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.mainContent article > * {
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+.cds--tile{
+  background: transparent !important;
+}
+.contentHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.metaInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: #525252;
+}
+
+.categoryBadge {
+  background: linear-gradient(135deg, #0f62fe 0%, #0043ce 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(15, 98, 254, 0.2);
+}
+
+.publishedDate {
+  color: #6f6f6f;
+  font-weight: 500;
+}
+
+.featuredBadge {
+  background: linear-gradient(135deg, #f1c21b 0%, #d2a106 100%);
+  color: #161616;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* box-shadow: 0 2px 4px rgba(241, 194, 27, 0.2); */
+}
+
+.contentTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #161616;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.contentExcerpt {
+  font-size: 1.25rem;
+  color: #525252;
+  line-height: 1.6;
+  /* margin-bottom: 2rem; */
+  font-weight: 400;
+}
+
+.contentBody {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #161616;
+  margin-bottom: 2rem;
+  /* Reset any unexpected styling from content HTML */
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure no large background elements in content */
+.contentBody > * {
+  background: transparent !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.contentBody img,
+.contentBody video,
+.contentBody iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 1rem 0 !important;
+  border-radius: 0.5rem !important;
+  /* Ensure no large embedded content */
+  max-height: 50vh !important;
+  overflow: hidden !important;
+}
+
+/* Handle any embedded content that might be causing issues */
+.contentBody embed,
+.contentBody object {
+  max-width: 100% !important;
+  max-height: 50vh !important;
+  overflow: hidden !important;
+}
+
+/* Handle canvas and SVG elements */
+.contentBody canvas,
+.contentBody svg {
+  max-width: 100% !important;
+  max-height: 50vh !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+
+/* Handle any element with large dimensions or background */
+.contentBody [style*="background-color"],
+.contentBody [style*="background-image"] {
+  background: transparent !important;
+}
+
+/* Final safety net - ensure no large elements can break the layout */
+.contentBody * {
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+/* Ensure the content area itself is clean */
+.contentBody {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.contentBody div {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Handle any HTML content that might have unexpected styling */
+.contentBody [style*="background"] {
+  background: transparent !important;
+}
+
+.contentBody [style*="width: 100%"] {
+  max-width: 100% !important;
+  width: auto !important;
+}
+
+.contentBody [style*="height: 100%"] {
+  height: auto !important;
+  max-height: 100vh !important;
+}
+
+/* Prevent any extremely large elements */
+.contentBody > div:first-child {
+  max-width: 100% !important;
+  max-height: 50vh !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+/* Ensure all content elements are properly sized */
+.contentBody > * {
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+/* Specific fix for large background elements */
+.contentBody > div {
+  position: relative !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+/* Fix for any element with large dimensions */
+.contentBody [style*="width: 100vw"],
+.contentBody [style*="height: 100vh"],
+.contentBody [style*="width: 100%"],
+.contentBody [style*="height: 100%"] {
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.contentBody h1,
+.contentBody h2,
+.contentBody h3,
+.contentBody h4,
+.contentBody h5,
+.contentBody h6 {
+  color: #161616;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.contentBody h1 { font-size: 2rem; }
+.contentBody h2 { font-size: 1.75rem; }
+.contentBody h3 { font-size: 1.5rem; }
+.contentBody h4 { font-size: 1.25rem; }
+.contentBody h5 { font-size: 1.125rem; }
+.contentBody h6 { font-size: 1rem; }
+
+.contentBody p {
+  margin-bottom: 1.5rem;
+  color: #161616;
+}
+
+.contentBody a {
+  color: #0f62fe;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.contentBody a:hover {
+  border-bottom-color: #0f62fe;
+}
+
+.contentBody ul,
+.contentBody ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.contentBody li {
+  margin-bottom: 0.5rem;
+  color: #161616;
+}
+
+.contentBody strong {
+  font-weight: 600;
+  color: #161616;
+}
+
+.contentBody blockquote {
+  border-left: 4px solid #0f62fe;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #525252;
+  /* background: rgba(15, 98, 254, 0.05); */
+  padding: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.attachmentsSection {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.attachmentsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #161616;
+  /* margin-bottom: 1.5rem; */
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.contentFooter {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.metaFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.metaInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: #525252;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaLabel {
+  font-weight: 500;
+  color: #6f6f6f;
+}
+
+.metaValue {
+  color: #161616;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  /* border: 1px solid #e0e0e0; */
+  /* background: #ffffff; */
+  color: #525252;
+  /* border-radius: 0.375rem; */
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /* text-decoration: none; */
+}
+
+.actionButton:hover {
+  /* background: #f4f4f4;
+  border-color: #c1c1c1; */
+  color: #161616;
+  /* transform: translateY(-1px); */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.actionButton:focus {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
+}
+
+.actionButton svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.sidebar {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-left: 1px solid #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    /* padding: 1.5rem; */
+  }
+  
+  .contentTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contentExcerpt {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contentBody {
+    font-size: 1rem;
+  }
+  
+  .metaFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .actionButtons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .actionButton {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .sidebar {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 1rem;
+  }
+  
+  .contentTitle {
+    font-size: 1.75rem;
+  }
+  
+  .metaInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    width: 100%;
+  }
+}

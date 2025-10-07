@@ -1,0 +1,261 @@
+  {
+
+  "homepage": {
+    "introduction": {
+      "read_more": "Read More"
+    }
+  },
+  "media": {
+    "gallery": {
+      "title": "Photos",
+      "viewAll": "View More"
+    }
+  },
+
+
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "search": "Search",
+    "readMore": "Read More",
+    "downloadPdf": "Download PDF",
+    "viewDetails": "View Details",
+    "goBack": "Go Back",
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "news": "News",
+    "notices": "Notices",
+    "documents": "Documents",
+    "services": "Services",
+    "contact": "Contact",
+    "faq": "Frequently Asked Questions"
+  ,
+  "openMenu": "Open Menu",
+  "closeMenu": "Close Menu",
+  "sideNavigation": "Side Navigation",
+  "mainNavigation": "Main Navigation"
+  },
+  "header": {
+    "govNepal": "Government of Nepal",
+    "ministry": "Ministry",
+    "department": "Department",
+    "localGov": "Local Government",
+    "languageSwitch": "Language Switch",
+    "nepali": "Nepali",
+    "english": "English"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "importantLinks": "Important Links",
+    "contactInfo": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "socialMedia": "Social Media",
+    "copyright": "All Rights Reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "latestNews": "Latest News",
+    "latestNotices": "Latest Notices",
+    "importantDocuments": "Important Documents",
+    "quickServices": "Quick Services",
+    "popularDownloads": "Popular Downloads"
+  },
+  "search": {
+    "placeholder": "Search...",
+    "results": "Search Results",
+    "noResults": "No results found",
+    "searchFor": "Search for:",
+    "filters": "Filters",
+    "sortBy": "Sort By",
+    "relevance": "Relevance",
+    "date": "Date",
+    "title": "Title"
+  },
+  "content": {
+    "title": "Content",
+    "description": "Browse our content and resources",
+    "attachments": {
+      "title": "Downloads & Attachments",
+      "download": "Download",
+      "preview": "Preview"
+    },
+    "notFound": {
+      "title": "Content Not Found",
+      "description": "The content you're looking for could not be found.",
+      "actions": {
+        "backToHome": "Back to Homepage"
+      }
+    },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "message": "Message",
+    "subject": "Subject",
+    "required": "Required",
+    "optional": "Optional",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "sent": "Sent",
+    "error": "An error occurred"
+  },
+  "dates": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "thisYear": "This Year"
+  },
+  "calendar": {
+    "bs": "B.S.",
+    "ad": "A.D.",
+    "nepaliCalendar": "Nepali Calendar",
+    "englishCalendar": "English Calendar"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Welcome to Our Office!",
+      "description": "We are dedicated to serving our community with excellence.",
+      "cta": "Learn More"
+    }
+  },
+  "media": {
+    "gallery": {
+      "title": "Photos",
+      "description": "Explore our collection of photos showcasing our activities and events",
+      "viewAll": "View More",
+      "loading": "Loading gallery...",
+      "error": "Unable to load gallery photos",
+      "noPhotos": "No photos available",
+      "noPhotosDescription": "There are currently no photos in the gallery.",
+      "photoCount": "{count, plural, =0 {No photos} =1 {1 photo} other {# photos}}",
+      "view": "View",
+      "download": "Download",
+      "share": "Share",
+      "filtersTitle": "Filters",
+      "search": "Search photos...",
+      "searchPlaceholder": "Search by title, description, or tags...",
+      "tags": "Tags",
+      "allTags": "All Tags",
+      "reset": "Reset Filters"
+    }
+  },
+  "office": {
+    "introduction": "Introduction",
+    "objective": "Objective",
+    "workDetails": "Work Details",
+    "organizationalStructure": "Organizational Structure",
+    "digitalCharter": "Digital Charter",
+    "employeeSanctions": "Employee Sanctions",
+    "departments": "Departments",
+    "employees": "Employees"
+  },
+  "documents": {
+    "types": {
+      "PDF": "PDF",
+      "DOC": "Word Document",
+      "DOCX": "Word Document",
+      "XLS": "Excel File",
+      "XLSX": "Excel File",
+      "PPT": "Presentation",
+      "PPTX": "Presentation"
+    },
+    "categories": {
+      "OFFICIAL": "Official",
+      "REPORT": "Report",
+      "FORM": "Form",
+      "POLICY": "Policy",
+      "PROCEDURE": "Procedure",
+      "GUIDELINE": "Guideline",
+      "NOTICE": "Notice",
+      "CIRCULAR": "Circular"
+    }
+  },
+  "hr": {
+    "title": "Employees",
+    "description": "Meet our dedicated team of professionals working across various departments",
+    "loading": "Loading team information...",
+    "error": "Unable to load team information",
+    "noEmployees": "No employees found",
+    "noEmployeesDescription": "There are currently no employees matching your search criteria.",
+    "totalDepartments": "Total Departments",
+    "totalEmployees": "Total Employees",
+    "employeesWithPhotos": "Employees with Photos",
+    "departmentsWithEmployees": "Active Departments",
+    "filters": {
+      "filtersTitle": "Filters",
+      "search": "Search employees...",
+      "searchPlaceholder": "Search by name, position, or contact...",
+      "department": "Department",
+      "allDepartments": "All Departments",
+      "allPositions": "All Positions",
+      "enterCustom": "Enter custom",
+      "reset": "Reset Filters",
+      "employeeCount": "{count, plural, =0 {No employees} =1 {1 employee} other {# employees}}"
+    },
+    "departments": {
+      "order": "Order",
+      "active": "Active",
+      "inactive": "Inactive",
+      "employeeCount": "{count, plural, =0 {No employees} =1 {1 employee} other {# employees}}"
+    },
+    "employees": {
+      "name": "Name",
+      "phone": "Phone",
+      "view": "View",
+      "photo": "Photo",
+      "position": "Position",
+      "department": "Department",
+      "order": "Order",
+      "status": "Status",
+      "contactInformation": "Contact Information",
+      "roomNumber": "Room Number",
+      "mobile": "Mobile",
+      "telephone": "Telephone",
+      "email": "Email",
+      "employeeId": "Employee ID",
+      "hasPhoto": "Has Photo",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "notices": {
+    "title": "Notices",
+    "description": "Important notices and announcements from our office",
+  "viewAll": "View More",
+    "error": "Unable to load notices",
+    "noNotices": "No notices found",
+    "noNoticesDescription": "There are currently no notices available.",
+    "filtersTitle": "Filters",
+    "publishedOn": "Published On",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "downloadPdf": "Download PDF"
+    }
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,995 @@
+/* Gallery Page */
+.galleryPage {
+  min-height: 100vh;
+  background: #f4f4f4;
+  padding: 1rem 1.8rem 0 1.8rem;
+}
+
+/* Page Header */
+.pageHeader {
+  margin: 2rem 0;
+  max-width: 800px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.25;
+}
+
+.pageDescription {
+  font-size: 1.25rem;
+  color: #525252;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Filters Section */
+.filtersSection {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.filtersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filtersTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.photoCount {
+  background: #e0e0e0;
+  color: #525252;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.filtersContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Search Filter */
+.searchFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.searchLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #161616;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.searchInput {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #0f62fe;
+  box-shadow: 0 0 0 2px rgba(15, 98, 254, 0.2);
+}
+
+.searchInput::placeholder {
+  color: #8d8d8d;
+}
+
+/* Tags Filter */
+.tagsFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tagsLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #161616;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagButton {
+  background: #e0e0e0;
+  color: #525252;
+  border: none;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.tagButton:hover {
+  background: #d0d0d0;
+  transform: translateY(-1px);
+}
+
+.tagButtonActive {
+  background: #0f62fe;
+  color: #ffffff;
+}
+
+.tagButtonActive:hover {
+  background: #0050e6;
+}
+
+/* Reset Filters */
+.resetFilters {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resetButton {
+  background: #da1e28;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resetButton:hover {
+  background: #ba1b23;
+  transform: translateY(-1px);
+}
+
+/* Gallery Grid */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.photoCard {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.photoCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.photoImageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photoCard:hover .photoImage {
+  transform: scale(1.05);
+}
+
+.photoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photoCard:hover .photoOverlay {
+  opacity: 1;
+}
+
+.photoActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photoActionButton {
+  background: #0f62fe;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  white-space: nowrap;
+}
+
+.photoActionButton:hover {
+  background: #0050e6;
+  transform: translateY(-1px);
+}
+
+.photoInfo {
+  padding: 1.5rem;
+}
+
+.photoTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.photoDescription {
+  font-size: 0.875rem;
+  color: #525252;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.photoTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.photoTag {
+  background: #e0e0e0;
+  color: #525252;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.photoTagMore {
+  background: #0f62fe;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.photoMetadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #8d8d8d;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.photoDate,
+.photoSize {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Pagination */
+.paginationSection {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.paginationInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.paginationText {
+  font-size: 0.875rem;
+  color: #525252;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pageSizeSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageSizeLabel {
+  font-size: 0.875rem;
+  color: #525252;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pageSizeSelect {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.paginationButton {
+  background: #ffffff;
+  color: #525252;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background: #f4f4f4;
+  border-color: #8d8d8d;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.previousButton,
+.nextButton {
+  min-width: 120px;
+  justify-content: center;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pageButton {
+  background: #ffffff;
+  color: #525252;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  min-width: 44px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pageButton:hover {
+  background: #f4f4f4;
+  border-color: #8d8d8d;
+}
+
+.pageButtonActive {
+  background: #0f62fe;
+  color: #ffffff;
+  border-color: #0f62fe;
+}
+
+.pageButtonActive:hover {
+  background: #0050e6;
+  border-color: #0050e6;
+}
+
+.pageEllipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  color: #8d8d8d;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.paginationSummary {
+  text-align: center;
+}
+
+.pageSummary {
+  font-size: 0.875rem;
+  color: #8d8d8d;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  margin-top: 10rem;
+}
+
+.modalContent {
+  max-width: 90vw;
+  max-height: 85vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  border: none;
+  width: 52px;
+  height: 50px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  padding: 0;
+}
+/* Navigation Buttons */
+.modalNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 11;
+  padding: 0;
+}
+
+.modalNavButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modalNavButtonLeft {
+  left: 1rem;
+}
+
+.modalNavButtonRight {
+  right: 1rem;
+}
+
+/* Photo Counter */
+.modalCounter {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  z-index: 11;
+}
+
+/* Navigation Buttons */
+.modalNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.modalNavButton:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modalNavButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.modalNavButtonLeft {
+  left: 1rem;
+}
+
+.modalNavButtonRight {
+  right: 1rem;
+}
+
+/* Photo Counter */
+.modalCounter {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  z-index: 10;
+}
+
+.modalImageContainer {
+  width: 100%;
+  height: 60vh;
+  max-height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.modalImage {
+  max-width: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.modalInfo {
+  padding: 2rem;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+  line-height: 1.25;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  flex: 1;
+  min-width: 200px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.modalActionButton {
+  background: #0f62fe;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modalActionButton:hover {
+  background: #0050e6;
+  transform: translateY(-1px);
+}
+
+.modalDescription {
+  margin-bottom: 1.5rem;
+}
+
+.modalDescription p {
+  font-size: 1rem;
+  color: #525252;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.modalTags {
+  margin-bottom: 1.5rem;
+}
+
+.modalTags h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0 0 0.5rem 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.modalTagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modalTag {
+  background: #e0e0e0;
+  color: #525252;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.modalMetadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metadataItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metadataLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #8d8d8d;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.metadataValue {
+  font-size: 0.875rem;
+  color: #161616;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Loading and Error States */
+.loadingContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid #0f62fe;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.emptyState h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0 0 1rem 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.emptyState p {
+  font-size: 1rem;
+  color: #525252;
+  margin: 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.errorContainer h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0 0 2rem 0;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.errorMessage {
+  background: #fff2f2;
+  border-radius: 8px;
+  border: 1px solid #ffd7d9;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.errorMessage p {
+  color: #da1e28;
+  margin-bottom: 1.5rem;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.retryButton {
+  background: #da1e28;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.retryButton:hover {
+  background: #ba1b23;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .pageDescription {
+    font-size: 1.125rem;
+  }
+  
+  .filtersSection {
+    padding: 1.5rem;
+  }
+  
+  .filtersHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .paginationSection {
+    padding: 1.5rem;
+  }
+  
+  .paginationInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .paginationControls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modalContent {
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+
+  .modalImageContainer {
+    height: 50vh;
+    max-height: 50vh;
+    margin: 0.5rem 0;
+  }
+
+  .modalNavButtonLeft {
+    left: 0.5rem;
+  }
+
+  .modalNavButtonRight {
+    right: 0.5rem;
+  }
+
+  .modalNavButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modalCounter {
+    bottom: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .modalCloseButton {
+    width: 36px;
+    height: 36px;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .modalInfo {
+    padding: 1.5rem;
+  }
+  
+  .modalHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .modalActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .modalMetadata {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+  
+  .filtersSection {
+    padding: 1rem;
+  }
+  
+  .galleryGrid {
+    gap: 1rem;
+  }
+  
+  .paginationSection {
+    padding: 1rem;
+  }
+  
+  .modalContent {
+    padding: 1rem;
+    max-height: 85vh;
+  }
+
+  .modalImageContainer {
+    height: 40vh;
+    max-height: 40vh;
+    margin: 0.25rem 0;
+  }
+
+  .modalNavButtonLeft {
+    left: 0.25rem;
+  }
+
+  .modalNavButtonRight {
+    right: 0.25rem;
+  }
+
+  .modalNavButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .modalCounter {
+    bottom: 0.25rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .modalCloseButton {
+    width: 32px;
+    height: 32px;
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+  
+  .modalInfo {
+    padding: 1rem;
+  }
+}

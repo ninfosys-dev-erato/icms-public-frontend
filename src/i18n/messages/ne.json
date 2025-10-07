@@ -1,0 +1,439 @@
+{
+  "common": {
+    "loading": "लोड हुँदै...",
+    "error": "त्रुटि भयो",
+    "retry": "पुनः प्रयास गर्नुहोस्",
+    "cancel": "रद्द गर्नुहोस्",
+    "save": "सुरक्षित गर्नुहोस्",
+    "edit": "सम्पादन गर्नुहोस्",
+    "delete": "मेटाउनुहोस्",
+    "create": "सिर्जना गर्नुहोस्",
+    "update": "अपडेट गर्नुहोस्",
+    "search": "खोज्नुहोस्",
+    "filter": "फिल्टर गर्नुहोस्",
+    "reset": "रिसेट गर्नुहोस्",
+    "submit": "पेश गर्नुहोस्",
+    "back": "फर्किनुहोस्",
+    "next": "अर्को",
+    "previous": "अघिल्लो",
+    "close": "बन्द गर्नुहोस्",
+    "view": "हेर्नुहोस्",
+    "download": "डाउनलोड गर्नुहोस्",
+    "share": "साझा गर्नुहोस्",
+    "print": "प्रिन्ट गर्नुहोस्",
+    "switchToLatinNumerals": "ल्याटिन अंकहरूमा परिवर्तन गर्नुहोस्",
+    "switchToDevanagariNumerals": "देवनागरी अंकहरूमा परिवर्तन गर्नुहोस्"
+  },
+  "navigation": {
+    "home": "गृहपृष्ठ",
+    "about": "हाम्रो बारेमा",
+    "services": "सेवाहरू",
+    "news": "समाचार तथा मिडिया",
+    "resources": "स्रोतहरू",
+    "contact": "सम्पर्क",
+    "login": "लगइन",
+    "logout": "लगआउट",
+    "dashboard": "ड्यासबोर्ड",
+    "profile": "प्रोफाइल",
+    "settings": "सेटिङहरू",
+    "siteTitle": "सरकारी कार्यालय",
+    "openMenu": "मेनु खोल्नुहोस्",
+    "mainNavigation": "मुख्य नेविगेशन",
+    "search": "खोज्नुहोस्",
+    "userAccount": "प्रयोगकर्ता खाता",
+    "sideNavigation": "छेउ नेविगेशन"
+  },
+  "government": {
+    "ministry": "मन्त्रालय",
+    "department": "विभाग",
+    "office": "कार्यालय",
+    "secretariat": "सचिवालय",
+    "government_of_nepal": "नेपाल सरकार",
+    "chief_minister": "मुख्यमन्त्री",
+    "minister": "मन्त्री",
+    "secretary": "सचिव",
+    "joint_secretary": "सहसचिव",
+    "under_secretary": "उपसचिव",
+    "officer": "अधिकारी"
+  },
+  "content": {
+    "latest_news": "ताजा समाचार",
+    "featured_services": "मुख्य सेवाहरू",
+    "important_notices": "महत्वपूर्ण सूचनाहरू",
+    "recent_publications": "हालका प्रकाशनहरू",
+    "upcoming_events": "आगामी कार्यक्रमहरू",
+    "read_more": "थप पढ्नुहोस्",
+    "view_all": "सबै हेर्नुहोस्",
+    "no_results": "कुनै परिणाम फेला परेन",
+    "published_on": "प्रकाशित मिति",
+    "updated_on": "अपडेट मिति",
+    "category": "श्रेणी",
+    "tags": "ट्यागहरू",
+    "related_content": "सम्बन्धित सामग्री"
+  },
+  "services": {
+    "apply_online": "अनलाइन आवेदन दिनुहोस्",
+    "track_application": "आवेदन ट्र्याक गर्नुहोस्",
+    "required_documents": "आवश्यक कागजातहरू",
+    "processing_time": "प्रशोधन समय",
+    "service_fee": "सेवा शुल्क",
+    "application_form": "आवेदन फारम",
+    "status": "स्थिति",
+    "submitted": "पेश गरिएको",
+    "under_review": "समीक्षाधीन",
+    "approved": "स्वीकृत",
+    "rejected": "अस्वीकृत",
+    "completed": "सम्पन्न"
+  },
+  "contact": {
+    "address": "ठेगाना",
+    "phone": "फोन",
+    "email": "इमेल",
+    "office_hours": "कार्यालय समय",
+    "get_directions": "दिशा प्राप्त गर्नुहोस्",
+    "send_message": "सन्देश पठाउनुहोस्",
+    "contact_form": "सम्पर्क फारम",
+    "name": "नाम",
+    "subject": "विषय",
+    "message": "सन्देश",
+    "submit_complaint": "गुनासो पेश गर्नुहोस्",
+    "track_complaint": "गुनासो ट्र्याक गर्नुहोस्"
+  },
+  "slider": {
+    "errorMessage": "स्लाइडर सामग्री लोड गर्न असफल",
+    "noSliders": "कुनै स्लाइडर सामग्री उपलब्ध छैन",
+    "sliderRegion": "छवि स्लाइडर",
+    "nextSlide": "अर्को स्लाइड",
+    "previousSlide": "अघिल्लो स्लाइड",
+    "slide": "स्लाइड",
+    "of": "मध्ये",
+    "views": "देखिएको",
+    "clicks": "क्लिक",
+    "employeeError": "कर्मचारी जानकारी लोड गर्न असफल",
+    "noEmployees": "कुनै कर्मचारी जानकारी उपलब्ध छैन"
+  },
+  "accessibility": {
+    "skip_to_content": "मुख्य सामग्रीमा जानुहोस्",
+    "increase_font_size": "फन्ट साइज बढाउनुहोस्",
+    "decrease_font_size": "फन्ट साइज घटाउनुहोस्",
+    "high_contrast": "उच्च कन्ट्रास्ट मोड",
+    "normal_contrast": "सामान्य कन्ट्रास्ट मोड",
+    "screen_reader_text": "यो लिङ्क नयाँ विन्डोमा खुल्छ"
+  },
+  "dates": {
+    "today": "आज",
+    "yesterday": "हिजो",
+    "last_week": "गत हप्ता",
+    "last_month": "गत महिना",
+    "date_format": "yyyy/MM/dd",
+    "time_format": "HH:mm"
+  },
+  "validation": {
+    "required": "यो फिल्ड आवश्यक छ",
+    "invalid_email": "कृपया वैध इमेल ठेगाना प्रविष्ट गर्नुहोस्",
+    "invalid_phone": "कृपया वैध फोन नम्बर प्रविष्ट गर्नुहोस्",
+    "min_length": "न्यूनतम {count} वर्ण आवश्यक",
+    "max_length": "अधिकतम {count} वर्ण मात्र अनुमतित",
+    "file_too_large": "फाइल साइज अधिकतम सीमा भन्दा ठूलो छ",
+    "invalid_file_type": "अवैध फाइल प्रकार"
+  },
+  "homepage": {
+    "hero": {
+      "introduction": "परिचय",
+      "welcome_title": "कुटीर तथा साना उद्योग कार्यालय, डडेल्धुरामा स्वागत छ",
+      "welcome_description": "यो कुटीर तथा साना उद्योग कार्यालय, डडेल्धुराको सार्वजनिक वेबसाइट हो।",
+      "scroll_down": "तल स्क्रोल गर्नुहोस्",
+      "our_services": "हाम्रा सेवाहरू",
+      "contact_us": "सम्पर्क गर्नुहोस्"
+    },
+    "introduction": {
+      "introduction": "परिचय",
+      "read_more": "थप पढ्नुहोस्",
+      "no_content_available": "हाल कुनै सामग्री उपलब्ध छैन।"
+    },
+    "services": {
+      "title": "हाम्रा सेवाहरू",
+      "description": "कुटीर तथा साना उद्योगहरूको विकासका लागि हामीले प्रदान गर्ने मुख्य सेवाहरू",
+      "view_all": "सबै सेवाहरू हेर्नुहोस्",
+      "learn_more": "थप जान्नुहोस्",
+      "industry_registration": "उद्योग दर्ता",
+      "industry_registration_desc": "कुटीर तथा साना उद्योगहरूको दर्ता सेवा",
+      "loan_facilities": "ऋण सुविधा",
+      "loan_facilities_desc": "उद्योगीहरूका लागि ऋण सुविधा उपलब्ध गराउने",
+      "technical_support": "प्राविधिक सहायता",
+      "technical_support_desc": "उद्योगहरूलाई प्राविधिक सहायता प्रदान",
+      "training_programs": "तालिम कार्यक्रम",
+      "training_programs_desc": "व्यवसायिक सीप विकास तालिमहरू",
+      "market_access": "बजार पहुँच",
+      "market_access_desc": "उत्पादनहरूको बजार पहुँचमा सहयोग",
+      "quality_control": "गुणस्तर नियन्त्रण",
+      "quality_control_desc": "उत्पादनको गुणस्तर नियन्त्रण सेवा"
+    },
+    "news": {
+      "title": "ताजा समाचार र सूचनाहरू",
+      "description": "हालैका महत्वपूर्ण सूचनाहरू र समाचारहरू",
+      "view_all": "सबै सूचनाहरू हेर्नुहोस्",
+      "failed_to_load": "सूचनाहरू लोड गर्न सकिएन"
+    },
+    "contact": {
+      "title": "सम्पर्क जानकारी",
+      "description": "कुनै पनि सोधपुछ वा सहायताका लागि हामीसँग सम्पर्क गर्नुहोस्",
+      "office_address": "कार्यालयको ठेगाना",
+      "phone_numbers": "फोन नम्बरहरू",
+      "email_address": "इमेल ठेगाना",
+      "office_hours": "कार्यालय समय",
+      "get_directions": "दिशा प्राप्त गर्नुहोस्"
+    }
+  },
+  "content": {
+    "title": "सामग्री",
+    "description": "हाम्रो सामग्री र संसाधनहरू ब्राउज गर्नुहोस्",
+    "notFound": {
+      "title": "सामग्री फेला परेन",
+      "description": "तपाईंले खोजेको सामग्री फेला पार्न सकिएन।",
+      "actions": {
+        "backToHome": "मुख्य पृष्ठमा फर्कनुहोस्"
+      }
+    },
+    "featured": "विशेष",
+    "meta": {
+      "author": "प्रकाशित",
+      "updated": "अन्तिम अपडेट"
+    },
+    "actions": {
+      "print": "प्रिन्ट",
+      "share": "साझेदारी",
+      "view": "हेर्नुहोस्"
+    },
+    "notice": {
+      "type": {
+        "notice": "नोटिस",
+        "circular": "परिपत्र",
+        "tender": "टेन्डर",
+        "vacancy": "खाली पद",
+        "result": "परिणाम"
+      },
+      "priority": {
+        "normal": "सामान्य",
+        "high": "उच्च",
+        "urgent": "तत्काल"
+      },
+      "referenceNo": "सन्दर्भ नं.",
+      "expiryDate": "म्याद सकिने मिति",
+      "office": "कार्यालय",
+      "publishedDate": "प्रकाशित मिति",
+      "viewCount": "हेराइहरू",
+      "downloadCount": "डाउनलोडहरू",
+      "attachments": "संलग्नकहरू",
+      "download": "डाउनलोड",
+      "view": "हेर्नुहोस्",
+      "readMore": "अझै पढ्नुहोस्",
+      "moreTags": "अझै ट्यागहरू",
+      "filters": {
+        "title": "फिल्टरहरू",
+        "reset": "रीसेट",
+        "searchPlaceholder": "नोटिसहरू खोज्नुहोस्...",
+        "basicFilters": "आधारभूत फिल्टरहरू",
+        "noticeType": "नोटिस प्रकार",
+        "selectNoticeType": "नोटिस प्रकार छान्नुहोस्",
+        "priority": {
+          "label": "प्राथमिकता",
+          "all": "सबै प्राथमिकताहरू"
+        },
+        "selectPriority": "प्राथमिकता छान्नुहोस्",
+        "office": "कार्यालय",
+        "selectOffice": "कार्यालय छान्नुहोस्",
+        "dateFilters": "मिति फिल्टरहरू",
+        "calendar": {
+          "bs": "विक्रम सम्बत",
+          "ad": "ग्रेगोरियन"
+        },
+        "year": "वर्ष",
+        "selectYear": "वर्ष छान्नुहोस्",
+        "month": "महिना",
+        "selectMonth": "महिना छान्नुहोस्",
+        "dateFrom": "मिति बाट",
+        "dateTo": "मिति सम्म",
+        "advancedFilters": "उन्नत फिल्टरहरू",
+        "hasAttachment": "संलग्नकहरू छन्",
+        "activeFilters": "सक्रिय फिल्टरहरू",
+        "noticeTypes": {
+          "all": "सबै प्रकारहरू",
+          "notice": "नोटिस",
+          "circular": "परिपत्र",
+          "tender": "टेन्डर",
+          "vacancy": "खाली पद",
+          "result": "परिणाम"
+        },
+        "offices": {
+          "all": "सबै कार्यालयहरू",
+          "federal": "संघीय",
+          "provincial": "प्रान्तीय",
+          "local": "स्थानीय"
+        }
+      }
+    },
+    "attachments": {
+      "title": "डाउनलोड र संलग्नकहरू",
+      "download": "डाउनलोड",
+      "preview": "पूर्वावलोकन"
+    },
+    "category": {
+      "totalItems": "{count, plural, =0 {कुनै वस्तु छैन} =1 {१ वस्तु} other {# वस्तुहरू}}",
+      "level": "स्तर {level}",
+      "subcategories": "उपश्रेणीहरू",
+      "content": "सामग्री",
+      "contentList": "सामग्री सूची",
+      "contentCount": "{count} वस्तुहरू",
+      "noContent": "कुनै सामग्री फेला परेन",
+      "noContentDescription": "यस श्रेणीमा अहिले कुनै सामग्री छैन।",
+      "empty": {
+        "title": "कुनै सामग्री उपलब्ध छैन",
+        "description": "यो श्रेणीमा हाल कुनै सामग्री उपलब्ध छैन।"
+      }
+    },
+    "pagination": {
+      "showing": "{total} मध्ये {from}-{to} परिणामहरू देखाइँदै",
+      "previous": "अघिल्लो",
+      "next": "अर्को",
+      "page": "पृष्ठ {page} {total} मध्ये"
+    },
+    "breadcrumb": "ब्रेडक्रम्ब",
+    "breadcrumbNavigation": "ब्रेडक्रम्ब नेभिगेसन",
+    "table": {
+      "title": "शीर्षक",
+      "excerpt": "सारांश",
+      "status": "स्थिति",
+      "featured": "विशेष",
+      "attachments": "संलग्नकहरू",
+      "createdAt": "सिर्जना गरिएको",
+      "actions": "कार्यहरू"
+    },
+    "sidebar": {
+      "category": "श्रेणी",
+      "categoryPath": "श्रेणी पथ",
+      "relatedContent": "सम्बन्धित सामग्री",
+      "noRelatedContent": "कुनै सम्बन्धित सामग्री उपलब्ध छैन।",
+      "viewAllInCategory": "यो श्रेणीमा सबै हेर्नुहोस्",
+      "quickActions": "द्रुत कार्यहरू",
+      "featured": "विशेष",
+      "actions": {
+        "print": "पृष्ठ प्रिन्ट गर्नुहोस्",
+        "share": "साझेदारी गर्नुहोस्",
+        "back": "फिर्ता जानुहोस्"
+      }
+    }
+  },
+  "search": {
+    "placeholder": "सामग्री, कागजातहरू, सेवाहरू खोज्नुहोस्...",
+    "search": "खोज्नुहोस्",
+    "noResults": "कुनै परिणाम फेला परेन",
+    "filters": "फिल्टरहरू"
+  },
+  "media": {
+    "gallery": {
+      "title": "फोटो ग्यालेरी",
+      "description": "हाम्रो गतिविधिहरू र कार्यक्रमहरू देखाउने फोटोहरूको संग्रह अन्वेषण गर्नुहोस्",
+      "viewAll": "सबै फोटोहरू हेर्नुहोस्",
+      "loading": "ग्यालेरी लोड हुँदै...",
+      "error": "ग्यालेरी फोटोहरू लोड गर्न सकिएन",
+      "noPhotos": "कुनै फोटोहरू उपलब्ध छैनन्",
+      "noPhotosDescription": "हाल ग्यालेरीमा कुनै फोटोहरू छैनन्।",
+      "photoCount": "{count, plural, =0 {कुनै फोटोहरू छैनन्} =1 {१ फोटो} other {# फोटोहरू}}",
+      "view": "हेर्नुहोस्",
+      "download": "डाउनलोड",
+      "share": "शेयर",
+      "filtersTitle": "फिल्टरहरू",
+      "search": "फोटोहरू खोज्नुहोस्...",
+      "searchPlaceholder": "शीर्षक, विवरण, वा ट्यागहरूद्वारा खोज्नुहोस्...",
+      "tags": "ट्यागहरू",
+      "allTags": "सबै ट्यागहरू",
+      "reset": "फिल्टरहरू रिसेट",
+      "showing": "{total} मध्ये {from}-{to} फोटोहरू देखाइँदै",
+      "previous": "अघिल्लो",
+      "next": "अर्को",
+      "page": "पृष्ठ {page} / {total}"
+    }
+  },
+  "hr": {
+    "title": "कर्मचारी विवरण",
+    "description": "विभिन्न विभागहरूमा काम गर्ने हाम्रा समर्पित पेशेवरहरूसँग भेट्नुहोस्",
+    "loading": "टोलीको जानकारी लोड गर्दै...",
+    "error": "टोलीको जानकारी लोड गर्न सकिएन",
+    "noEmployees": "कुनै कर्मचारी फेला परेनन्",
+    "noEmployeesDescription": "तपाईंको खोज मापदण्डसँग मेल खाने कुनै कर्मचारीहरू हालमा छैनन्।",
+    "totalDepartments": "कुल विभागहरू",
+    "totalEmployees": "कुल कर्मचारीहरू",
+    "employeesWithPhotos": "फोटो भएका कर्मचारीहरू",
+    "departmentsWithEmployees": "सक्रिय विभागहरू",
+    "filters": {
+      "filtersTitle": "फिल्टरहरू",
+      "search": "कर्मचारीहरू खोज्नुहोस्...",
+      "searchPlaceholder": "नाम, पद, वा सम्पर्क अनुसार खोज्नुहोस्...",
+      "department": "विभाग",
+      "allDepartments": "सबै विभागहरू",
+      "reset": "फिल्टर रिसेट गर्नुहोस्",
+      "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैनन्} =1 {1 जना कर्मचारी} other {# जना कर्मचारीहरू}}"
+    },
+    "departments": {
+      "order": "क्रम",
+      "active": "सक्रिय",
+      "inactive": "निष्क्रिय",
+      "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैनन्} =1 {1 जना कर्मचारी} other {# जना कर्मचारीहरू}}"
+    },
+    "employees": {
+      "view": "हेर्नुहोस्",
+      "position": "पद",
+      "department": "विभाग",
+      "order": "क्रम",
+      "status": "स्थिति",
+      "active": "सक्रिय",
+      "inactive": "निष्क्रिय",
+      "contactInformation": "सम्पर्क जानकारी",
+      "roomNumber": "कोठा नम्बर",
+      "mobile": "मोबाइल",
+      "telephone": "टेलिफोन",
+      "email": "इमेल",
+      "employeeId": "कर्मचारी आईडी",
+      "hasPhoto": "फोटो छ",
+      "yes": "छ",
+      "no": "छैन"
+    }
+  },
+  "notices": {
+    "title": "सूचना र घोषणाहरू",
+    "description": "हाम्रो कार्यालयबाट प्रकाशित नवीनतम सूचना, परिपत्र, टेन्डर र घोषणाहरूसँग अपडेट रहनुहोस्",
+    "viewAll": "सबै सूचनाहरू हेर्नुहोस्",
+    "loading": "सूचनाहरू लोड गर्दै...",
+    "error": "सूचनाहरू लोड गर्न सकिएन",
+    "noNotices": "कुनै सूचना उपलब्ध छैन",
+    "noNoticesDescription": "हाल कुनै सूचना प्रकाशित गरिएको छैन।",
+    "noticeCount": "{count, plural, =0 {कुनै सूचना छैन} =1 {१ सूचना} other {# सूचनाहरू}}",
+    "readMore": "थप पढ्नुहोस्",
+    "download": "डाउनलोड",
+    "share": "शेयर",
+    "reference": "सन्दर्भ",
+    "filtersTitle": "फिल्टरहरू",
+    "search": "सूचनाहरू खोज्नुहोस्...",
+    "searchPlaceholder": "शीर्षक, सामग्री, वा सन्दर्भ नम्बरले खोज्नुहोस्...",
+    "types": "प्रकारहरू",
+    "priorities": "प्राथमिकताहरू",
+    "reset": "फिल्टरहरू रिसेट",
+    "showing": "{total} मध्ये {from}-{to} देखाइँदै",
+    "previous": "अघिल्लो",
+    "next": "अर्को",
+    "page": "पृष्ठ {page} / {total}",
+    "type": {
+      "notice": "सूचना",
+      "circular": "परिपत्र",
+      "tender": "टेन्डर",
+      "vacancy": "खाली पद",
+      "result": "परिणाम"
+    },
+    "priority": {
+      "normal": "सामान्य",
+      "high": "उच्च",
+      "urgent": "तत्काल"
+    }
+  }
+}

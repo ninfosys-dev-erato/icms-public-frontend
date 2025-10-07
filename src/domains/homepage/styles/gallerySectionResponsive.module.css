@@ -1,0 +1,34 @@
+.gallerySectionResponsive {
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.galleryImageResponsive {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .gallerySectionResponsive {
+    padding: 1.5rem 0.5rem;
+  }
+  .galleryImageResponsive {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallerySectionResponsive {
+    padding: 1rem 0.25rem;
+  }
+  .galleryImageResponsive {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Employees",
+  "description": "Meet our dedicated team of professionals working across various departments",
+  "loading": "Loading team information...",
+  "error": "Unable to load team information",
+  "noEmployees": "No employees found",
+  "noEmployeesDescription": "There are currently no employees matching your search criteria.",
+  "totalDepartments": "Total Departments",
+  "totalEmployees": "Total Employees",
+  "employeesWithPhotos": "Employees with Photos",
+  "departmentsWithEmployees": "Active Departments",
+  "filters": {
+    "filtersTitle": "Filters",
+    "search": "Search employees...",
+    "searchPlaceholder": "Search by name, position, or contact...",
+    "department": "Department",
+    "allDepartments": "All Departments",
+    "reset": "Reset Filters",
+    "employeeCount": "{count, plural, =0 {No employees} =1 {1 employee} other {# employees}}",
+    "position": "Position"
+  },
+  "departments": {
+    "order": "Order",
+    "active": "Active",
+    "inactive": "Inactive",
+    "employeeCount": "{count, plural, =0 {No employees} =1 {1 employee} other {# employees}}"
+  },
+  "employees": {
+    "photo": "Photo",
+    "name": "Name",
+    "phone": "Phone",
+    "department": "Department",
+    "order": "Order",
+    "status": "Status",
+    "contactInformation": "Contact Information",
+    "roomNumber": "Room Number",
+    "mobile": "Mobile",
+    "telephone": "Telephone",
+    "email": "Email",
+    "employeeId": "Employee ID",
+    "hasPhoto": "Has Photo",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

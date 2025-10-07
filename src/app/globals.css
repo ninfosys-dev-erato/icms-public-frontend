@@ -1,0 +1,341 @@
+/* @import "@carbon/styles/css/styles.css";
+
+ */
+
+ @import '@carbon/styles/css/styles.css';
+/* Optional: IBM Plex for identical typography */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+
+
+
+
+
+
+
+
+/* iCMS Design System - Custom Properties */
+
+:root {
+  --font-sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-nepali: 'Noto Sans Devanagari', 'Preeti', 'Kalimati', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', monospace;
+}
+
+/* Font size adjustments based on user preference */
+html[data-font-size="small"] {
+  font-size: 14px;
+}
+
+html[data-font-size="medium"] {
+  font-size: 16px;
+}
+
+html[data-font-size="large"] {
+  font-size: 18px;
+}
+
+/* Language-specific font families */
+html[lang="ne"] body {
+  font-family: var(--font-nepali);
+}
+
+html[lang="en"] body {
+  font-family: var(--font-sans);
+}
+
+/* High contrast mode */
+html[data-carbon-theme="high-contrast"] {
+  --cds-text-01: #ffffff;
+  --cds-text-02: #c6c6c6;
+  --cds-text-03: #6f6f6f;
+  --cds-text-04: #ffffff;
+  --cds-text-05: #8d8d8d;
+  --cds-background: #000000;
+  --cds-layer-01: #262626;
+  --cds-layer-02: #393939;
+  --cds-layer-03: #525252;
+  --cds-ui-01: #262626;
+  --cds-ui-02: #393939;
+  --cds-ui-03: #525252;
+  --cds-ui-04: #6f6f6f;
+  --cds-ui-05: #f4f4f4;
+  --cds-interactive-01: #78a9ff;
+  --cds-interactive-02: #6f6f6f;
+  --cds-interactive-03: #78a9ff;
+  --cds-interactive-04: #78a9ff;
+  --cds-focus: #78a9ff;
+}
+
+/* Government-specific styles */
+.government-header {
+  background: linear-gradient(135deg, #0066cc 0%, #003d7a 100%);
+  color: white;
+}
+
+.nepal-flag-colors {
+  background: linear-gradient(45deg, #0066cc 50%, #e31837 50%);
+}
+
+/* Accessibility improvements */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Additional custom styles for better appearance */
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* Card hover effects */
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors duration-200;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cds-ui-01);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cds-ui-04);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cds-ui-05);
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Focus management */
+.focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Layout utilities */
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 672px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1056px) {
+  .container {
+    padding: 0 1.7rem;
+  }
+}
+
+/* Typography utilities */
+.text-nepal {
+  font-family: var(--font-nepali);
+  font-feature-settings: "kern" 1;
+}
+
+.text-english {
+  font-family: var(--font-sans);
+}
+
+/* Government-specific components */
+.government-seal {
+  width: 48px;
+  height: 48px;
+  background-image: url('/images/nepal-coat-of-arms.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.priority-urgent {
+  border-left: 4px solid #da1e28;
+}
+
+.priority-high {
+  border-left: 4px solid #f1c21b;
+}
+
+.priority-medium {
+  border-left: 4px solid #0066cc;
+}
+
+.priority-low {
+  border-left: 4px solid #198038;
+}
+
+/* SVG sizing constraints to prevent layout issues */
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+svg.breadcrumb-icon {
+  width: 1rem !important;
+  height: 1rem !important;
+  min-width: 1rem !important;
+  min-height: 1rem !important;
+  max-width: 1rem !important;
+  max-height: 1rem !important;
+}
+
+svg.breadcrumb-separator {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  min-width: 1.5rem !important;
+  min-height: 1.5rem !important;
+  max-width: 1.5rem !important;
+  max-height: 1.5rem !important;
+}
+
+/* Content page layout constraints */
+.content-page-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.content-breadcrumb {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Ensure proper container sizing */
+.container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Responsive grid */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 671px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 672px) and (max-width: 1055px) {
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1056px) and (max-width: 1311px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cds--header {
+  display: none;
+}

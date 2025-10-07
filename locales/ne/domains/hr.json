@@ -1,0 +1,47 @@
+{
+  "title": "कर्मचारीहरू",
+  "description": "विभिन्न विभागहरूमा काम गर्ने हाम्रा समर्पित पेशेवरहरूसँग भेट्नुहोस्",
+  "loading": "टोलीको जानकारी लोड गर्दै...",
+  "error": "टोलीको जानकारी लोड गर्न सकिएन",
+  "noEmployees": "कुनै कर्मचारी फेला परेनन्",
+  "noEmployeesDescription": "तपाईंको खोज मापदण्डसँग मेल खाने कुनै कर्मचारीहरू हालमा छैनन्।",
+  "totalDepartments": "कुल विभागहरू",
+  "totalEmployees": "कुल कर्मचारीहरू",
+  "employeesWithPhotos": "फोटो भएका कर्मचारीहरू",
+  "departmentsWithEmployees": "सक्रिय विभागहरू",
+  "filters": {
+    "filtersTitle": "फिल्टरहरू",
+    "search": "कर्मचारीहरू खोज्नुहोस्...",
+    "searchPlaceholder": "नाम, पद, वा सम्पर्क अनुसार खोज्नुहोस्...",
+    "department": "विभाग",
+    "allDepartments": "सबै विभागहरू",
+    "reset": "फिल्टर रिसेट गर्नुहोस्",
+    "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैनन्} =1 {1 जना कर्मचारी} other {# जना कर्मचारीहरू}}",
+    "position": "पद"
+  },
+  "departments": {
+    "order": "क्रम",
+    "active": "सक्रिय",
+    "inactive": "निष्क्रिय",
+    "employeeCount": "{count, plural, =0 {कुनै कर्मचारी छैनन्} =1 {1 जना कर्मचारी} other {# जना कर्मचारीहरू}}"
+  },
+  "employees": {
+    "photo": "फोटो",
+    "view": "हेर्नुहोस्",
+    "name": "नाम",
+    "phone": "फोन",
+    "position": "पद",
+    "department": "विभाग",
+    "order": "क्रम",
+    "status": "स्थिति",
+    "contactInformation": "सम्पर्क जानकारी",
+    "roomNumber": "कोठा नम्बर",
+    "mobile": "मोबाइल",
+    "telephone": "टेलिफोन",
+    "email": "इमेल",
+    "employeeId": "कर्मचारी आईडी",
+    "hasPhoto": "फोटो छ",
+    "yes": "छ",
+    "no": "छैन"
+  }
+}

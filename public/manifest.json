@@ -1,0 +1,11 @@
+{
+  "name": "Nepal Government Portal",
+  "short_name": "Nepal Gov",
+  "description": "Official Portal of Government of Nepal - Notices, Services, and Documents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066cc",
+  "lang": "en",
+  "dir": "ltr"
+}
