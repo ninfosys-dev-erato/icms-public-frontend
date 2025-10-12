@@ -8,8 +8,8 @@ export const revalidate = 300; // 5 minutes
 // Generate static params for all locales
 export async function generateStaticParams() {
   return [
+    { locale: 'ne' },
     { locale: 'en' },
-    { locale: 'ne' }
   ];
 }
 
