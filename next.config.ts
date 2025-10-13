@@ -126,6 +126,7 @@ const nextConfig: NextConfig = {
   // Redirects
   async redirects() {
     return [
+      { source: '/', destination: '/ne', permanent: true },
       { source: '/homepage', destination: '/', permanent: true },
     ];
   },
