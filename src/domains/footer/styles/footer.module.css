@@ -22,10 +22,14 @@
 }
 
 /* Footer Skeleton - Removed to prevent hydration issues */
-.footerContactInfoInline{
+/* .footerContactInfoInline{
   display: inline;
-}
+} */
 
+.footerSocialMediaRight{
+  display: flex;
+  gap: 0.5rem;
+}
 .footerInfoRow{
   display: flex;
   flex-direction: row;
@@ -204,16 +208,26 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Footer Bottom Section */
-.footerBottom {
-  padding: 1.5rem 0;
+
+.footerBottomTop {
   background: rgba(0, 0, 0, 0.15);
+  /* padding-bottom: 0.75rem;
+   */
+   height: 60px;
+   padding-top: 15px;
+}
+
+.footerBottomBar {
+  /* border-top: 1px solid rgba(255,255,255,0.06); */
+  margin-bottom: 1rem;
+  background-color: #24467e;
+  padding-top: 10px;
 }
 
 .footerBottomContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -223,6 +237,17 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.footerCopyright {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.footerLastUpdated {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
 }
 
 .footerContactInfoInline{
@@ -289,8 +314,17 @@
 }
 
 /* Chat Button */
-.footerBottomRight {
-  flex-shrink: 0;
+.footerBottomLeft {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 700;
+}
+
+.footerDevelopedBy {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .footerChatButton {
