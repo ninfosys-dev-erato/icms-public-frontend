@@ -96,38 +96,36 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
   };
 
   if (isLoading || error || !introduction) {
-    // Only render skeletons or error on client to avoid hydration mismatch
-    if (typeof window === "undefined") {
-      return null;
-    }
+    // Render skeletons during both server and client renders so the
+    // initial HTML matches and avoids hydration mismatches.
     return (
-          <Grid>
-              <Column lg={8} md={8} sm={16}>
-                <Tile
-                  style={{
-                    padding: "2rem",
-                    minHeight: "220px",
-                    height: "100%",
-                  }}
-                >
-                  <SkeletonText heading width="60%" />
-                  <SkeletonText paragraph width="100%" lineCount={3} />
-                </Tile>
-              </Column>
-              <Column lg={8} md={8} sm={16}>
-                <Tile
-                  style={{
-                    minHeight: "220px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <SkeletonText width="80%" lineCount={2} />
-                </Tile>
-              </Column>
-          </Grid>
+      <Grid>
+        <Column lg={8} md={8} sm={16}>
+          <Tile
+            style={{
+              padding: "2rem",
+              minHeight: "220px",
+              height: "100%",
+            }}
+          >
+            <SkeletonText heading width="60%" />
+            <SkeletonText paragraph width="100%" lineCount={3} />
+          </Tile>
+        </Column>
+        <Column lg={8} md={8} sm={16}>
+          <Tile
+            style={{
+              minHeight: "220px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <SkeletonText width="80%" lineCount={2} />
+          </Tile>
+        </Column>
+      </Grid>
     );
   }
 
@@ -148,7 +146,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
             {/* About Us Section */}
             <Column lg={8} md={8} sm={8}>
               <Tile
-                style={{ padding: "2rem", minHeight: "220px", height: "100%" }}
+                style={{ padding: "2rem", minHeight: "220px", height: "100%", textAlign:'justify' }}
               >
                 <h2
                   style={{
