@@ -72,6 +72,7 @@ export interface FooterData {
     directorate?: TranslatableEntity;
     officeName?: TranslatableEntity;
     address?: TranslatableEntity;
+    mapIframe?: string;
     leftLogo?: string;
     rightLogo?: string;
   };
