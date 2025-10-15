@@ -69,6 +69,7 @@ export class FooterService {
         directorate: officeSettings?.directorate,
         officeName: officeSettings?.officeName,
         address: officeSettings?.officeAddress,
+        mapIframe: officeSettings?.mapIframe,
         leftLogo,
         rightLogo
       },

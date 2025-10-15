@@ -22,15 +22,8 @@ export function FooterTop({ data, locale }: FooterTopProps) {
       <div className={styles.footerTopContainer}>
         {/* Office Branding */}
         <div className={styles.footerTopBranding}>
-          {/* Left Logo */}
-          <div className={styles.footerTopLogo}>
-            <img 
-              src={getLogoUrl(officeInfo.leftLogo)} 
-              alt="Left Logo"
-              className={styles.footerTopEmblem}
-              onError={(e) => console.error('Left logo failed to load:', officeInfo.leftLogo, e)}
-            />
-          </div>
+          {/* Left Logo container (logo hidden per design; backdrop used instead) */}
+          <div className={styles.footerTopLogo} aria-hidden="true" />
           
           <div className={styles.footerTopText}>
             {/* Show directorate */}
@@ -53,15 +46,8 @@ export function FooterTop({ data, locale }: FooterTopProps) {
             )}
           </div>
           
-          {/* Right Logo */}
-          <div className={styles.footerTopLogo}>
-            <img 
-              src={getLogoUrl(officeInfo.rightLogo)} 
-              alt="Right Logo"
-              className={styles.footerTopEmblem}
-              onError={(e) => console.error('Right logo failed to load:', officeInfo.rightLogo, e)}
-            />
-          </div>
+          {/* Right Logo container (logo hidden per design; backdrop used instead) */}
+          <div className={styles.footerTopLogo} aria-hidden="true" />
         </div>
       </div>
     </div>
