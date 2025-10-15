@@ -114,7 +114,7 @@
   justify-content: flex-end;
   /* gap: 2rem; */
   flex: 1;
-  height: 100%;
+  /* height: 100%; */
   padding: 1rem 0;
   position: relative;
   overflow: hidden;
@@ -1096,7 +1096,10 @@
   .headerMain :global(.cds--header__action) {
     display: flex !important;
   }
-  
+  .headerLeftSection{
+    height: 70%;
+  }
+
   /* Enable side navigation for mobile - local selectors with aggressive overrides */
   .headerTop :global(.cds--side-nav),
   .headerMain :global(.cds--side-nav),
@@ -1805,6 +1808,13 @@ body:has(.headerMain :global(.cds--side-nav--expanded)) {
     max-height: 85vh;
   }
 }
+
+@media (max-width: 500px){
+    .headerTopLogo{
+    display: none;
+  }
+}
+  
 
 /* Custom Header Dropdown Menu Styles */
 .headerMenuDropdown {
