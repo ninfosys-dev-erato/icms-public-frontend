@@ -195,7 +195,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
             {/* About Us Section */}
             <Column lg={8} md={8} sm={8}>
               <Tile
-                style={{ padding: "2rem", minHeight: "220px", height: "100%" }}
+                style={{ padding: "2rem", minHeight: "220px", height: "100%", textAlign:'justify' }}
               >
                 <h2
                   style={{
