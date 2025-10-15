@@ -44,18 +44,21 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
       try {
         setIsLoading(true);
         setError(null);
+        const [introRes] = await Promise.allSettled([
+          OfficeDescriptionService.getOfficeIntroduction(effectiveLocale),
+        ]);
 
-        // Fetch office descriptions
-        const introductionData =
-          await OfficeDescriptionService.getOfficeIntroduction(effectiveLocale);
-        const objectivesData =
-          await OfficeDescriptionService.getOfficeObjective(effectiveLocale);
-
-        setIntroduction(introductionData);
-        setObjectives(objectivesData);
+        if (introRes.status === "fulfilled") {
+          setIntroduction(introRes.value);
+        } else {
+          console.error("Failed to fetch introduction:", introRes.reason);
+          const message = introRes.reason instanceof Error ? introRes.reason.message : String(introRes.reason);
+          setError(message || "Failed to load content");
+        }
       } catch (err) {
-        console.error("Failed to fetch office descriptions:", err);
-        setError("Failed to load content");
+        console.error("Unexpected error fetching office descriptions:", err);
+        const message = err instanceof Error ? err.message : String(err);
+        setError(message || "Failed to load content");
       } finally {
         setIsLoading(false);
       }
@@ -95,9 +98,13 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
     return content.trim().replace(/\n{3,}/g, "\n\n");
   };
 
-  if (isLoading || error || !introduction) {
-    // Render skeletons during both server and client renders so the
-    // initial HTML matches and avoids hydration mismatches.
+  // Avoid rendering on server to prevent hydration mismatches
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  // Loading state: show skeletons
+  if (isLoading) {
     return (
       <Grid>
         <Column lg={8} md={8} sm={16}>
@@ -123,6 +130,48 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
             }}
           >
             <SkeletonText width="80%" lineCount={2} />
+          </Tile>
+        </Column>
+      </Grid>
+    );
+  }
+
+  // Error state: show a helpful message so user sees why nothing is displayed
+  if (error) {
+    return (
+      <Grid fullWidth className={styles.introductionSection}>
+        <Column lg={8} md={8} sm={8}>
+          <Tile style={{ padding: "2rem", minHeight: "220px", height: "100%" }}>
+            <h2 style={{ fontWeight: 600, fontSize: "1.5rem", marginBottom: "1rem" }}>
+              {effectiveLocale === "ne" ? "हाम्रो बारेमा" : "About Us"}
+            </h2>
+            <p style={{ color: "#b00020" }}>{error}</p>
+          </Tile>
+        </Column>
+        <Column lg={8} md={8} sm={8}>
+          <Tile style={{ minHeight: "220px" }}>
+            <NoticesSidebar locale={effectiveLocale} />
+          </Tile>
+        </Column>
+      </Grid>
+    );
+  }
+
+  // No data available: show placeholder to indicate missing introduction
+  if (!introduction) {
+    return (
+      <Grid fullWidth className={styles.introductionSection}>
+        <Column lg={8} md={8} sm={8}>
+          <Tile style={{ padding: "2rem", minHeight: "220px", height: "100%" }}>
+            <h2 style={{ fontWeight: 600, fontSize: "1.5rem", marginBottom: "1rem" }}>
+              {effectiveLocale === "ne" ? "हाम्रो बारेमा" : "About Us"}
+            </h2>
+            <p style={{ color: "#525252" }}>{effectiveLocale === "ne" ? "प्रस्तुति उपलब्ध छैन" : "Introduction not available"}</p>
+          </Tile>
+        </Column>
+        <Column lg={8} md={8} sm={8}>
+          <Tile style={{ minHeight: "220px" }}>
+            <NoticesSidebar locale={effectiveLocale} />
           </Tile>
         </Column>
       </Grid>
