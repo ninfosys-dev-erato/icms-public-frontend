@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import {
   HeroSection,
-  IntroductionSection,
   GallerySection,
   ContactSection,
 } from "./";
@@ -42,6 +41,21 @@ const NoticesSection = dynamic(
     }
   }
 );
+
+  // Dynamically import IntroductionSection as a client-only component to avoid
+  // hydration mismatches coming from third-party UI libraries that render
+  // different markup between server and client (e.g. Carbon Grid).
+  const IntroductionSection = dynamic(
+    () => import("./IntroductionSection").then((mod) => ({ default: mod.IntroductionSection })),
+    {
+      ssr: false,
+      loading: () => (
+        <section style={{ minHeight: 220 }} aria-hidden>
+          {/* minimal placeholder while client loads */}
+        </section>
+      ),
+    }
+  );
 
 interface HomepageContainerProps {
   // No props needed - components now fetch their own data
