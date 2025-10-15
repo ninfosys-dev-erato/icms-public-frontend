@@ -4,7 +4,7 @@ import React from "react";
 // ...existing code...
 import { Button, InlineLoading, InlineNotification, Tile } from '@carbon/react';
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+// Do not use next-intl here to avoid throwing when translation keys are missing
 import { useHomepageNotices } from "../hooks";
 
 interface NoticesSidebarProps {
@@ -16,7 +16,20 @@ export const NoticesSidebar: React.FC<NoticesSidebarProps> = ({
   locale = "en",
   limit = 6,
 }) => {
-  const t = useTranslations("notices");
+  // Local fallbacks in case messages are missing for a locale
+  const localMessages: Record<string, Record<string, string>> = {
+    en: {
+      loading: 'Loading...',
+      error: 'Error',
+      noNotices: 'No notices available',
+    },
+    ne: {
+      loading: 'लोड हुँदैछ...',
+      error: 'एरर',
+      noNotices: 'कुनै सूचना छैन',
+    },
+  };
+  const safeMessage = (key: string) => (localMessages[locale] && localMessages[locale][key]) || localMessages['en'][key] || '';
   const { data: notices = [], isLoading, isError } = useHomepageNotices(limit);
 
   const getLocalizedText = (text: any, fallback: string = ''): string => {
@@ -81,7 +94,7 @@ export const NoticesSidebar: React.FC<NoticesSidebarProps> = ({
             {locale === 'ne' ? 'सूचनाहरू' : 'Notices'}
           </h2>
         </div>
-        <InlineLoading description={t("loading")} />
+        <InlineLoading description={safeMessage('loading')} />
       </div>
     );
   }
@@ -105,7 +118,7 @@ export const NoticesSidebar: React.FC<NoticesSidebarProps> = ({
         </div>
         <InlineNotification
           kind={isError ? 'error' : 'info'}
-          title={isError ? t("error") : t("noNotices")}
+          title={isError ? safeMessage('error') : safeMessage('noNotices')}
           hideCloseButton
         />
       </div>
