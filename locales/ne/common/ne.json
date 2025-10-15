@@ -111,15 +111,7 @@
     "employeeError": "कर्मचारी जानकारी लोड गर्न असफल",
     "noEmployees": "कुनै कर्मचारी जानकारी उपलब्ध छैन"
   },
-  "content": {
-    "publishedOn": "प्रकाशित मिति",
-    "lastUpdated": "अन्तिम अपडेट",
-    "category": "श्रेणी",
-    "tags": "ट्यागहरू",
-    "relatedContent": "सम्बन्धित सामग्री",
-    "attachments": "संलग्नकहरू",
-    "downloadCount": "डाउनलोड संख्या"
-  },
+  
   "forms": {
     "name": "नाम",
     "email": "इमेल",
@@ -168,6 +160,7 @@
       "tags": "ट्यागहरू",
       "allTags": "सबै ट्यागहरू",
       "reset": "फिल्टरहरू रिसेट गर्नुहोस्"
+        ,"breadcrumbNavigation": "ब्रेडक्रम्ब नेभिगेसन"
     }
   },
   "homepage": {
