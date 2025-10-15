@@ -320,6 +320,19 @@
   white-space: nowrap;
 }
 
+.headerTopLogin {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerTopLogin :global(.cds--btn) {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 600 !important;
+  display: flex;
+  justify-content: center;
+}
+
+
 .headerTopFlag {
   display: flex;
   align-items: center;
