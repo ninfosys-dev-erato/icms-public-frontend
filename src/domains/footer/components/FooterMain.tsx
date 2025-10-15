@@ -12,6 +12,40 @@ export function FooterMain({ data, locale }: FooterMainProps) {
   if (!data) return null;
 
   const { officeHours, importantLinks } = data;
+  const officeInfo = data.officeInfo || null;
+  // mapIframe may exist on backend OfficeSettings but not declared in FooterData.officeInfo
+  const mapIframe: string | undefined = (officeInfo as any)?.mapIframe;
+  // Try to extract an iframe src from the provided HTML snippet (or accept a raw URL)
+  const iframeSrc: string | undefined = (() => {
+    if (!mapIframe) return undefined;
+
+    // Normalize common encodings that can appear when JSON/string-escaped
+    let normalized = String(mapIframe);
+
+    // Convert unicode-escaped characters like \u003C and \u003E to < and >
+    normalized = normalized.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>');
+
+    // Convert HTML entities if present
+    normalized = normalized.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+
+    // Remove backslash-escapes for quotes (e.g. \" -> ") which can happen when the string was double-escaped
+    normalized = normalized.replace(/\\"/g, '"').replace(/\\'/g, "'");
+
+    // Try to extract src attribute from normalized HTML
+    const srcMatch = normalized.match(/src=["']([^"']+)["']/i);
+    if (srcMatch) return srcMatch[1];
+
+    // If the backend returned just a URL string, accept it
+    if (/^https?:\/\//i.test(normalized.trim())) return normalized.trim();
+
+    return undefined;
+  })();
+
+  // Debug: log iframe data so we can inspect at runtime (remove in production)
+  if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line no-console
+    console.debug('Footer mapIframe debug:', { mapIframe, iframeSrc });
+  }
 
   // Helper function to render links in columns
   // const renderLinksColumn = (links: any[], title: string) => {
@@ -115,6 +149,54 @@ export function FooterMain({ data, locale }: FooterMainProps) {
               // locale === "ne" ? "सरकारी मन्त्रालयहरू" : "Government Ministries"
             )}
             {renderLinksColumn(importantLinks.quickLinks)}
+          </div>
+        </Column>
+        {/* Map / Location Section */}
+        <Column className={styles.footerMapLocation}>
+          <h3 className={styles.footerSectionTitle}>
+            {locale === 'ne' ? 'स्थान' : 'Location'}
+          </h3>
+          <div className={styles.footerMapWrapper}>
+            {iframeSrc ? (
+              <div className={styles.footerMapIframe}>
+                <iframe
+                  src={iframeSrc}
+                  title={locale === 'ne' ? 'कार्यालय नक्सा' : 'Office map'}
+                  width="100%"
+                  height={250}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  style={{ border: 0 }}
+                />
+              </div>
+            ) : mapIframe ? (
+              // As a last resort, if mapIframe exists but we couldn't extract a src,
+              // render the provided HTML snippet (keeps previous behavior).
+              // eslint-disable-next-line @next/next/no-danger
+              <div
+                className={styles.footerMapIframe}
+                dangerouslySetInnerHTML={{ __html: mapIframe }}
+              />
+            ) : officeInfo?.address ? (
+              // Embed Google Maps iframe using the office address (fallback when backend iframe not provided)
+              <div className={styles.footerMapIframe}>
+                <iframe
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(
+                    locale === 'ne' ? officeInfo.address.ne : officeInfo.address.en
+                  )}&output=embed`}
+                  title={locale === 'ne' ? 'कार्यालय नक्सा' : 'Office map'}
+                  width="100%"
+                  height={360}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  style={{ border: 0 }}
+                />
+              </div>
+            ) : (
+              <p className={styles.footerNoMap}>
+                {locale === 'ne' ? 'नक्सा उपलब्ध छैन' : 'Map not available'}
+              </p>
+            )}
           </div>
         </Column>
       </Grid>

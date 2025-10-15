@@ -30,13 +30,7 @@ export function FooterContainer({ locale, className = "" }: FooterProps) {
         <div className={styles.footerTop}>
           <div className={styles.footerTopContainer}>
             <div className={styles.footerTopBranding}>
-              <div className={styles.footerTopLogo}>
-                <img
-                  src="/icons/nepal-emblem.svg"
-                  alt="Nepal Emblem"
-                  className={styles.footerTopEmblem}
-                />
-              </div>
+              <div className={styles.footerTopLogo} aria-hidden="true" />
               <div className={styles.footerTopText}>
                 <h1 className={styles.footerTopTitle}>
                   {locale === "ne"
@@ -44,13 +38,7 @@ export function FooterContainer({ locale, className = "" }: FooterProps) {
                     : "Department of Information Technology"}
                 </h1>
               </div>
-              <div className={styles.footerTopLogo}>
-                <img
-                  src="/icons/nepal-emblem.svg"
-                  alt="Nepal Emblem"
-                  className={styles.footerTopEmblem}
-                />
-              </div>
+              <div className={styles.footerTopLogo} aria-hidden="true" />
             </div>
           </div>
         </div>
