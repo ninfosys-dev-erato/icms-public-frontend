@@ -14,7 +14,7 @@ interface NoticesSidebarProps {
 
 export const NoticesSidebar: React.FC<NoticesSidebarProps> = ({
   locale = "en",
-  limit = 6,
+  limit = 4,
 }) => {
   const t = useTranslations("notices");
   const { data: notices = [], isLoading, isError } = useHomepageNotices(limit);
