@@ -11,6 +11,7 @@ import {
   SideNav,
   SideNavItems,
   SideNavMenuItem
+  , Button
 } from "@carbon/react";
 import { ADToBS } from "bikram-sambat-js";
 import { useTranslations } from "next-intl";
@@ -370,6 +371,35 @@ export function HeaderTop({ data, locale }: HeaderTopProps) {
                     >
                       {getDisplayDate()}
                     </time>
+
+                    {/* Carbon-compliant Login button for admin dashboard */}
+                    <div className={styles.headerTopLogin}>
+                      {/* Always open admin/login in a new tab (hot login URL from env or fallback) */}
+                      {(() => {
+                        const adminUrl = (process as any)?.env?.NEXT_PUBLIC_API_BASE_URL || "/admin";
+                        const url = new URL(adminUrl)
+                        if (!url.hostname.startsWith('admin.')){
+                          url.hostname = 'admin.' + url.hostname
+                        }
+
+                        url.pathname = url.pathname.replace(/\/api\/v1.*$/, '/admin');
+                        const admin = url.toString()
+
+
+                        return (
+                          <Button
+                            size="sm"
+                            kind="primary"
+                            href={admin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={locale === "ne" ? "प्रशासन लगइन" : "Admin Login"}
+                          >
+                            {locale === "ne" ? "लगइन" : "Login"}
+                          </Button>
+                        );
+                      })()}
+                    </div>
                   </div>
                 </HeaderGlobalBar>
               </div>
