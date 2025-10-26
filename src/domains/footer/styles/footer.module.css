@@ -22,10 +22,14 @@
 }
 
 /* Footer Skeleton - Removed to prevent hydration issues */
-.footerContactInfoInline{
+/* .footerContactInfoInline{
   display: inline;
-}
+} */
 
+.footerSocialMediaRight{
+  display: flex;
+  gap: 0.5rem;
+}
 .footerInfoRow{
   display: flex;
   flex-direction: row;
@@ -259,25 +263,46 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Footer Bottom Section */
-.footerBottom {
-  padding: 1.5rem 0;
+
+.footerBottomTop {
   background: rgba(0, 0, 0, 0.15);
+  /* padding-bottom: 0.75rem;
+   */
+   height: 60px;
+   padding-top: 15px;
+}
+
+.footerBottomBar {
+  /* border-top: 1px solid rgba(255,255,255,0.06); */
+  margin-bottom: 1rem;
+  background-color: #24467e;
+  padding-top: 10px;
 }
 
 .footerBottomContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .footerBottomLeft {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.footerCopyright {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.footerLastUpdated {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
 }
 
 .footerContactInfoInline{
@@ -344,8 +369,17 @@
 }
 
 /* Chat Button */
-.footerBottomRight {
-  flex-shrink: 0;
+.footerBottomLeft {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 700;
+}
+
+.footerDevelopedBy {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .footerChatButton {
@@ -373,10 +407,13 @@
 }
 
 /* Responsive Design */
+
+/* Tablet and Below (1024px) */
 @media (max-width: 1024px) {
   .footerMainContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1.5rem;
   }
   
   .footerOfficeHours {
@@ -391,32 +428,27 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .footerBottomContainer {
+    padding: 0 1.5rem;
+  }
+
+  .footerTopContainer {
+    padding: 0 1.5rem;
+  }
 }
 
+/* Tablet Portrait and Below (768px) */
 @media (max-width: 768px) {
+  /* Top Section */
   .footerTopBranding {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 1rem;
   }
   
   .footerTopLogo {
     order: -1;
-  }
-  
-  .footerBottomContainer {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  
-  .footerBottomLeft {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .footerContactInfo {
-    align-items: center;
   }
   
   .footerTopEmblem {
@@ -427,21 +459,118 @@
   .footerTopTitle {
     font-size: 1.3rem;
   }
+
+  .footerTopSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .footerTopAddress {
+    font-size: 0.85rem;
+  }
+
+  .footerTopText {
+    text-align: left;
+  }
+
+  /* Main Section */
+  .footerMainContainer {
+    padding: 0 1rem;
+  }
+
+  .footerMapIframe {
+    min-height: 280px;
+  }
+
+  .footerMapIframe iframe {
+    min-height: 280px;
+  }
+
+  /* Bottom Section */
+  .footerBottomContainer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  
+  .footerBottomLeft {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .footerContactInfo {
+    align-items: flex-start;
+  }
+
+  .footerContactInfoInline {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .footerInfoRow {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .footerSocialMediaRight {
+    justify-content: flex-start;
+  }
+
+  .footerCopyright {
+    font-size: 0.8rem;
+  }
+
+  .footerLastUpdated {
+    font-size: 0.75rem;
+  }
+
+  .footerDevelopedBy {
+    font-size: 0.85rem;
+  }
+
+  /* Bottom Section Styles */
+  .footerBottomTop {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .footerContactItem {
+    font-size: 0.8rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .footerSocialLink {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footerChatButton {
+    width: 50px;
+    height: 50px;
+  }
 }
 
+/* Mobile (480px) */
 @media (max-width: 480px) {
+  /* Sections Padding */
   .footerTop,
   .footerMain,
   .footerBottom {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
   }
   
   .footerTopContainer,
   .footerMainContainer,
   .footerBottomContainer {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
   }
-  
+
+  /* Top Section */
   .footerTopEmblem {
     width: 50px;
     height: 50px;
@@ -450,8 +579,114 @@
   .footerTopTitle {
     font-size: 1.1rem;
   }
-  
+
+  .footerTopSubtitle {
+    font-size: 0.8rem;
+  }
+
+  .footerTopAddress {
+    font-size: 0.8rem;
+  }
+
+  /* Main Section */
   .footerSectionTitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .footerOfficeHoursSeasonTitle {
+    font-size: 0.9rem;
+  }
+
+  .footerOfficeHoursDayName,
+  .footerOfficeHoursTime {
+    font-size: 0.85rem;
+  }
+
+  .footerLink {
+    font-size: 0.875rem;
+    padding: 0.35rem 0;
+  }
+
+  .footerMapIframe {
+    min-height: 250px;
+  }
+
+  .footerMapIframe iframe {
+    min-height: 250px;
+  }
+
+  /* Bottom Section */
+  .footerBottomTop {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .footerContactItem {
+    font-size: 0.8rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .footerContactInfoInline {
+    gap: 0.5rem;
+  }
+
+  .footerInfoRow {
+    gap: 0.5rem;
+  }
+
+  .footerSocialLink {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footerCopyright {
+    font-size: 0.8rem;
+  }
+
+  .footerLastUpdated {
+    font-size: 0.75rem;
+  }
+
+  .footerDevelopedBy {
+    font-size: 0.85rem;
+  }
+
+  .footerChatButton {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Extra Small Mobile (360px) */
+@media (max-width: 360px) {
+  .footerTopContainer,
+  .footerMainContainer,
+  .footerBottomContainer {
+    padding: 0 0.75rem;
+  }
+
+  .footerTopTitle {
+    font-size: 1rem;
+  }
+
+  .footerSectionTitle {
+    font-size: 0.95rem;
+  }
+
+  .footerContactItem {
+    font-size: 0.75rem;
+  }
+
+  .footerSocialLink {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footerChatButton {
+    width: 45px;
+    height: 45px;
   }
 }
